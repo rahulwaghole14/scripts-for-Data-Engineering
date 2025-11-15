@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: commentary
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: digitalsubscriptions_Commentary___Editorial
+      - name: digitalsubscriptions_Commentary___Marketing

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: network
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: network__navigatableforpbi
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: "SAFE_CAST(Date AS TIMESTAMP)"
+      - name: network__datetable
+      - name: network__masthead_articles_by_day
+      - name: network__masthead_daily
+      - name: network__masthead_logged_in_users
+      - name: network__targetstableforpbi

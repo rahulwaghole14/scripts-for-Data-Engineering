@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: brightcove
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: brightcove__daily_videos
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: record_load_dts
+      - name: brightcove__daily_videos_destination
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: record_load_dts

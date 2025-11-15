@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: statsnz
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: nz_regional_council_2023_generalised
+        description: regional shapefile nz 2023

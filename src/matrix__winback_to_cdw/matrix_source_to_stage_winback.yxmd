@@ -1,0 +1,428 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1206" y="54" width="12" height="1740" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="174" y="54" width="12" height="1740" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="510" y="54" width="12" height="1740" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="186" y="54" width="324" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Metadata for stage table.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="522" y="54" width="684" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Hard rules for staging area. Should never change.</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="1218" y="54" width="204" height="48" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Data should be loaded to Staging tables</Text>
+          <Font name="Segoe UI" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="213">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="&quot;MATRIX&quot;" field="record_source" size="32" type="String" />
+            <FormulaField expression="DateTimeNow()" field="record_load_dts" size="19" type="DateTime" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>record data</AnnotationText>
+          <DefaultAnnotationText><![CDATA[record_source = "MATRIX"
+record_load_dts = DateTimeNow()
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="214">
+      <GuiSettings>
+        <Position x="582" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"Del_Email"</Value>
+          <Value name="Check Box (84)">False</Value>
+          <Value name="Check Box (117)">False</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">True</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Clean strings</AnnotationText>
+          <DefaultAnnotationText>Clean strings</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="218">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1254" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_source" selected="True" />
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="ProductID" selected="True" />
+            <SelectField field="Week_Ending_Date" selected="True" />
+            <SelectField field="Week_No" selected="True" />
+            <SelectField field="Sub_ID" selected="True" />
+            <SelectField field="Del_Email" selected="True" />
+            <SelectField field="Del_Surname" selected="True" />
+            <SelectField field="Del_Firstname" selected="True" />
+            <SelectField field="CommentText" selected="True" />
+            <SelectField field="RateID" selected="True" />
+            <SelectField field="Proposed_Rate" selected="True" size="9.2" />
+            <SelectField field="Cancellation_ID" selected="True" />
+            <SelectField field="Cancel_Desc" selected="True" />
+            <SelectField field="Cancellation_Date" selected="True" />
+            <SelectField field="Sord_Startdate" selected="True" />
+            <SelectField field="Period" selected="True" />
+            <SelectField field="Service" selected="True" />
+            <SelectField field="Resubscriber" selected="True" />
+            <SelectField field="DoNotCall" selected="True" />
+            <SelectField field="Cancelled_Multiple_Pubs" selected="True" />
+            <SelectField field="Cancelled_Pubs" selected="True" />
+            <SelectField field="Cancelled_Proposed_Rate" selected="True" />
+            <SelectField field="Active_Magazine_Pub" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="219">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1482" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="44">%user.cdw_env%|||[stage].[matrix].temp_winback_subscribers1</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <Projection />
+            <TransactionSize />
+            <PostSQL>alter index all on [stage].[matrix].[temp_winback_subscribers1] rebuild;</PostSQL>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL>alter index all on [stage].[matrix].[temp_winback_subscribers1] disable;</PreSQL>
+            <Geometry>True</Geometry>
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Delete</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%user.cdw_env%
+Query=[stage].[matrix].temp_winbac...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="220">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File FileFormat="23" RecordLimit="">aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,
+	ffx.temp_winback_subscribers1.Week_Ending_Date,
+	ffx.temp_winback_subscribers1.Week_No,
+	ffx.temp_winback_subscribers1.Sub_ID,
+	ffx.temp_winback_subscribers1.Del_Email,
+	ffx.temp_winback_subscribers1.Del_Surname,
+	ffx.temp_winback_subscribers1.Del_Firstname,
+	ffx.temp_winback_subscribers1.CommentText,
+	ffx.temp_winback_subscribers1.RateID,
+	ffx.temp_winback_subscribers1.Proposed_Rate,
+	ffx.temp_winback_subscribers1.Cancellation_ID,
+	ffx.temp_winback_subscribers1.Cancel_Desc,
+	ffx.temp_winback_subscribers1.Cancellation_Date,
+	ffx.temp_winback_subscribers1.Sord_Startdate,
+	ffx.temp_winback_subscribers1.Period,
+	ffx.temp_winback_subscribers1.Service,
+	ffx.temp_winback_subscribers1.Resubscriber,
+	ffx.temp_winback_subscribers1.DoNotCall,
+	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,
+	ffx.temp_winback_subscribers1.Cancelled_Pubs,
+	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,
+	ffx.temp_winback_subscribers1.Active_Magazine_Pub 
+from ffx.temp_winback_subscribers1</File>
+          <FormatSpecificOptions>
+            <SingleRowFetch>False</SingleRowFetch>
+            <ReadCentroids>False</ReadCentroids>
+            <TableStyle>Quoted</TableStyle>
+            <CacheData>False</CacheData>
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>True</ReadUncommitted>
+            <NoProgress>True</NoProgress>
+            <PostSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:MATRIX_PROD
+Query=select ffx.temp_winback_subs...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ProductID" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Week_Ending_Date" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="DateTime" />
+            <Field name="Week_No" size="3" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Sub_ID" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="String" />
+            <Field name="Del_Email" size="50" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Del_Surname" size="50" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Del_Firstname" size="50" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="CommentText" size="8000" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="RateID" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="String" />
+            <Field name="Proposed_Rate" scale="2" size="11" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="FixedDecimal" />
+            <Field name="Cancellation_ID" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Cancel_Desc" size="30" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Cancellation_Date" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="DateTime" />
+            <Field name="Sord_Startdate" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="DateTime" />
+            <Field name="Period" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="String" />
+            <Field name="Service" size="10" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Resubscriber" size="16" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="DoNotCall" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="Int16" />
+            <Field name="Cancelled_Multiple_Pubs" size="20" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Cancelled_Pubs" size="50" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Cancelled_Proposed_Rate" size="8000" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+            <Field name="Active_Magazine_Pub" size="20" source="File: aka:MATRIX_PROD|||select ffx.temp_winback_subscribers1.ProductID,&#xA;	ffx.temp_winback_subscribers1.Week_Ending_Date,&#xA;	ffx.temp_winback_subscribers1.Week_No,&#xA;	ffx.temp_winback_subscribers1.Sub_ID,&#xA;	ffx.temp_winback_subscribers1.Del_Email,&#xA;	ffx.temp_winback_subscribers1.Del_Surname,&#xA;	ffx.temp_winback_subscribers1.Del_Firstname,&#xA;	ffx.temp_winback_subscribers1.CommentText,&#xA;	ffx.temp_winback_subscribers1.RateID,&#xA;	ffx.temp_winback_subscribers1.Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Cancellation_ID,&#xA;	ffx.temp_winback_subscribers1.Cancel_Desc,&#xA;	ffx.temp_winback_subscribers1.Cancellation_Date,&#xA;	ffx.temp_winback_subscribers1.Sord_Startdate,&#xA;	ffx.temp_winback_subscribers1.Period,&#xA;	ffx.temp_winback_subscribers1.Service,&#xA;	ffx.temp_winback_subscribers1.Resubscriber,&#xA;	ffx.temp_winback_subscribers1.DoNotCall,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Multiple_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Pubs,&#xA;	ffx.temp_winback_subscribers1.Cancelled_Proposed_Rate,&#xA;	ffx.temp_winback_subscribers1.Active_Magazine_Pub &#xA;from ffx.temp_winback_subscribers1" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="213" Connection="Output" />
+      <Destination ToolID="214" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="214" Connection="Output26" />
+      <Destination ToolID="218" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="218" Connection="Output" />
+      <Destination ToolID="219" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="220" Connection="Output" />
+      <Destination ToolID="213" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>matrix_env</Name>
+        <Value>aka:MATRIX_PROD</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>cdw_env</Name>
+        <Value>aka:CDW_PROD</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>matrix_source_to_stage_winback</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b804c138-9e6c-457b-a781-6110f6bfb1f3" />
+      <Telemetry>
+        <PreviousWorkflowId value="4723ef92-5e00-4f67-bbd4-53e53d191369" />
+        <OriginWorkflowId value="e09ca9dc-2549-42f9-aaeb-1c69d31f6643" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+      <Event>
+        <Description>After Run With Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>%AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+    </Events>
+  </Properties>
+</AlteryxDocument>

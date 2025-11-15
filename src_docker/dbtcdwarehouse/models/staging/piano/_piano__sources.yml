@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: piano
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    database: hexa-data-report-etl-prod
+    # uncomment for dev access
+    #database: hexa-data-report-etl-dev
+    schema: cdw_stage
+    tables:
+      - name: piano__subscriptions
+        columns:
+          - name: subscription_id
+            tests:
+              - unique
+              - not_null
+        loaded_at_field: "TIMESTAMP_SECONDS(start_date)"
+      - name: piano__vxsubscriptionlog
+        loaded_at_field: "DATETIME(record_load_dts)"
+      - name: piano__webhook_events
+        loaded_at_field: load_datetimestamp
+      - name: piano__composerreport_conversion_page
+        loaded_at_field: "SAFE_CAST(date_at AS TIMESTAMP)"
+      - name: piano__vxconversionreport_conversion_page
+        loaded_at_field: "SAFE_CAST(date_at AS TIMESTAMP)"
+      - name: piano__converted_terms
+        loaded_at_field: update_dts

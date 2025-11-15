@@ -1,0 +1,9 @@
+version: 2
+
+models:
+- name: stg_presspatron__api_users
+  columns:
+    - name: email
+- name: stg_presspatron__braze_user_profiles
+  columns:
+    - name: Email_address

@@ -1,0 +1,2 @@
+composer	articles
+composer	tags

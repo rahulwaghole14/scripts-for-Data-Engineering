@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: hexaevent
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage_hexaevent
+    tables:
+      - name: hexaevent_rtb__RTB14___Entries
+      - name: hexaevent_rtb__RTB15___Entries
+      - name: hexaevent_rtb__RTB16___Entries
+      - name: hexaevent_rtb__RTB17___Entries
+      - name: hexaevent_rtb__RTB18___Entries
+      - name: hexaevent_rtb__RTB19___Entries
+      - name: hexaevent_rtb__RTB2020___Entries
+      - name: hexaevent_rtb__RTB21___Entries__Virtual_
+      - name: hexaevent_rtb__RTB21___Entries_In_Person__Pre_Refunds_
+      - name: hexaevent_rtb__RTB22___All_Entries__Pre_Refunds_
+      - name: hexaevent_rtb__RTB22___Entries__Virtual_
+      - name: hexaevent_rtb__RTB23___Entries
+      - name: hexaevent_rtb__RTB24___Entries_

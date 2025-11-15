@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: naviga
+    database: hexa-data-report-etl-prod
+    schema: adw_stage
+    tables:
+      - name: naviga__adrevenue
+        description: a thing about ad revenue
+      - name: naviga__adrevenue_bq_*
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+          filter: _TABLE_SUFFIX >= FORMAT_TIMESTAMP('%Y%m%d', TIMESTAMP_SUB(CURRENT_TIMESTAMP(), INTERVAL 30 DAY))
+        loaded_at_field: "PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%S%Ez', Timestamp)"
+        description: a thing about ad revenue daily
+      - name: naviga__mapping

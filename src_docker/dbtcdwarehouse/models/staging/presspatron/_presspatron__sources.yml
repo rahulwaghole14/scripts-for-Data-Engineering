@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: presspatron
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: presspatron__braze_user_profiles
+
+  - name: presspatron_api_data
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    database: hexa-data-report-etl-prod
+    schema: press_patron_api_data
+    tables:
+      - name: subscriptions
+        loaded_at_field: "SAFE_CAST(load_dts AS TIMESTAMP)"
+      - name: users
+        loaded_at_field: "SAFE_CAST(load_dts AS TIMESTAMP)"
+      - name: transactions
+        loaded_at_field: "SAFE_CAST(load_dts AS TIMESTAMP)"

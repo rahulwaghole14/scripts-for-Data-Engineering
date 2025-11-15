@@ -1,0 +1,47 @@
+version: 2
+
+sources:
+# adobe masthead and replatform docs:
+# docs: https://docs.google.com/spreadsheets/d/1mEq98qWUBly82dcoXw0OT-nm-3gJc7PcTcMo409KOuY/edit?gid=0#gid=0
+  - name: adobe_analytics
+    database: hexa-data-report-etl-prod
+    schema: cdw_raw_adobe_analytics_masthead
+    tables:
+      - name: referrer_type
+      - name: event
+
+      - name: data_*
+        columns:
+          - name: cust_visid
+            description: If a custom visitor ID is set, it is populated in this column.
+          - name: hitid_high
+            description: Used with hitid_low to identify a hit.
+          - name: hitid_low
+            description: Used with hitid_high to identify a hit.
+          - name: event_list
+          - name: post_evar14
+            description: masthead member_id
+          - name: post_evar163
+            description: masthead name e.g. "hexa:mastheads:the-post"
+          - name: ref_type
+
+  - name: adobe_analytics_replatform # field docs in sat table src_docker/dbtcdwarehouse/models/intermediate/satellites/_schema.yml
+    database: hexa-data-report-etl-prod
+    schema: cdw_raw_adobe_analytics_replatform
+    tables:
+      - name: referrer_type
+      - name: event
+      - name: data_*
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: "SAFE_CAST(date_time AS TIMESTAMP)"
+        columns:
+          - name: cust_visid
+            description: If a custom visitor ID is set, it is populated in this column.
+          - name: hitid_high
+            description: Used with hitid_low to identify a hit.
+          - name: hitid_low
+            description: Used with hitid_high to identify a hit.
+          - name: event_list
+          - name: ref_type

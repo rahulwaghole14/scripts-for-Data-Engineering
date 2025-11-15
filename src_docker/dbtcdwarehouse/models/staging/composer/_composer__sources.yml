@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: composer
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: composer__articles
+        columns:
+          - name: content_id
+            tests:
+              - unique
+              - not_null
+      - name: composer__tags
+        columns:
+          - name: tag
+            tests:
+              # - unique
+              - not_null

@@ -1,0 +1,27 @@
+# Use an official Python runtime as a parent image
+FROM python:3.12
+
+# Set the working directory in the container to /app
+WORKDIR /usr/src/app
+
+# Display the current working directory
+RUN pwd
+
+# Copy the contents of the dbtcdwarehouse and common directory into /usr/src/app
+
+COPY admanagerworkflow admanagerworkflow
+
+COPY common common
+
+# Install any needed packages specified in requirements.txt
+WORKDIR /usr/src/app/admanagerworkflow
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+#RUN pip install --no-cache-dir -r /usr/src/app/idm-bigquery/requirements.txt
+WORKDIR /usr/src/app
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Specify the Python command to run the application
+CMD ["python", "-m", "admanagerworkflow.main"]

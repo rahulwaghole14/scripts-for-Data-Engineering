@@ -1,0 +1,2628 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="186" width="1116" height="132" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="486" width="1116" height="84" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="342" width="1116" height="120" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="54" width="1116" height="108" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="258" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="donation_web_url" />
+            <Field name="Donations_filename" />
+            <Field name="sftp_host" />
+            <Field name="supporter_file_location" />
+            <Field name="supporter_web_url" />
+            <Field name="Supporter_filename" />
+            <Field name="suptsftp_host" />
+            <Field name="donation_file_location" />
+          </Fields>
+          <Data>
+            <r>
+              <c>https://dashboard.presspatron.com/publisher/export_donations_csv</c>
+              <c>%Engine.TempFilePath%export_donations.csv</c>
+              <c>sftp://fairfaxmedia-sftp.neolane.net/incoming/PressPatron/donations.csv</c>
+              <c>%Engine.TempFilePath%buffered_supporter.csv</c>
+              <c>https://dashboard.presspatron.com/publisher/export_supporter_csv</c>
+              <c>%Engine.TempFilePath%export_supporter.csv</c>
+              <c>sftp://fairfaxmedia-sftp.neolane.net/incoming/PressPatron/supporter.csv</c>
+              <c>%Engine.TempFilePath%processed_donations.csv</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>PressPatron donations csv</AnnotationText>
+          <DefaultAnnotationText>PressPatron donations csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="270" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Start SFTP donations.csv after download is completed</AnnotationText>
+          <DefaultAnnotationText>Start SFTP donations.csv after download is completed</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="102" y="90" width="96" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Connection definition</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="102" y="270" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Workflow order controller</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="102" y="594" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Donation file preparation</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="39">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="102" y="390" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>data file transfer operation</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="40">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="102" y="510" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>file transfer auditing</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="618" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="donation_web_url" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="URL Source" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_donation_web_url" selected="True" input="Left_" />
+                <SelectField field="Left_Donations_filename" selected="True" input="Left_" />
+                <SelectField field="Left_sftp_host" selected="True" input="Left_" />
+                <SelectField field="Right_sequence_nr" selected="True" input="Right_" />
+                <SelectField field="Right_ID" selected="True" input="Right_" />
+                <SelectField field="Right_Transaction date" selected="True" input="Right_" />
+                <SelectField field="Right_Sign up date" selected="True" input="Right_" />
+                <SelectField field="Right_First name" selected="True" input="Right_" />
+                <SelectField field="Right_Last name" selected="True" input="Right_" />
+                <SelectField field="Right_Email address" selected="True" input="Right_" />
+                <SelectField field="Right_Amount of transaction" selected="True" input="Right_" />
+                <SelectField field="Right_Frequency" selected="True" input="Right_" />
+                <SelectField field="Right_Currency" selected="True" input="Right_" />
+                <SelectField field="Right_Payment status" selected="True" input="Right_" />
+                <SelectField field="Right_Metadata" selected="True" input="Right_" />
+                <SelectField field="Right_URL Source" selected="True" input="Right_" type="V_WString" size="8254" />
+                <SelectField field="Right_Newsletter preference" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>retain SFTP host details for downstream</AnnotationText>
+          <DefaultAnnotationText>retain SFTP host details for downstream</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="714" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Uppercase(Left([Frequency],1))+Right([Frequency],Length([Frequency])-1)" field="Frequency" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Frequency = Uppercase(Left([Frequency],1))+Right([Frequency],Length([Frequency])...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="60">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="330" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Transaction date" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Transaction date - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="62">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="522" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>sequence_nr</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="810" y="678" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Transaction date" />
+            <Field name="Sign up date" />
+            <Field name="ID" selected="False" />
+            <Field name="First name" selected="False" />
+            <Field name="Last name" selected="False" />
+            <Field name="Email address" selected="False" />
+            <Field name="Amount of transaction" selected="False" />
+            <Field name="Frequency" selected="False" />
+            <Field name="Currency" selected="False" />
+            <Field name="Payment status" selected="False" />
+            <Field name="Metadata" selected="False" />
+            <Field name="URL Source" selected="False" />
+            <Field name="Newsletter preference" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>DateTimeFormat(DateTimeToLocal(Replace([_CurrentField_]," UTC","")),"%d %b %Y")</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DateTimeFormat(DateTimeToLocal(Replace([_CurrentField_]," UTC...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="94">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="714" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="ID" selected="True" rename="TransactionID" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="First name" selected="True" />
+            <SelectField field="Last name" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Subscribed to newsletter?" selected="True" />
+            <SelectField field="Active supporter?" selected="True" />
+            <SelectField field="Frequency of recurring payment" selected="True" />
+            <SelectField field="Recurring contribution amount?" selected="True" />
+            <SelectField field="Total contributions to date" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiFieldFormula.MultiFieldFormula">
+        <Position x="810" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldType>Text</FieldType>
+          <Fields orderChanged="False">
+            <Field name="Sign up date" />
+            <Field name="TransactionID" selected="False" />
+            <Field name="First name" selected="False" />
+            <Field name="Last name" selected="False" />
+            <Field name="Email address" selected="False" />
+            <Field name="Subscribed to newsletter?" selected="False" />
+            <Field name="Active supporter?" selected="False" />
+            <Field name="Frequency of recurring payment" selected="False" />
+            <Field name="Recurring contribution amount?" selected="False" />
+            <Field name="Total contributions to date" selected="False" />
+            <Field name="Currency" selected="False" />
+            <Field name="*Unknown" selected="False" />
+          </Fields>
+          <CopyOutput value="False" />
+          <Expression>DateTimeFormat(DateTimeToLocal(Replace([_CurrentField_]," UTC","")),"%d %b %Y")</Expression>
+          <ChangeFieldType value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DateTimeFormat(DateTimeToLocal(Replace([_CurrentField_]," UTC...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiFieldFormula" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="618" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="supporter_web_url" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Email address" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_donation_web_url" selected="True" input="Left_" />
+                <SelectField field="Left_Donations_filename" selected="True" input="Left_" />
+                <SelectField field="Left_sftp_host" selected="True" input="Left_" />
+                <SelectField field="Right_sequence_nr" selected="True" input="Right_" />
+                <SelectField field="Right_ID" selected="True" input="Right_" />
+                <SelectField field="Right_Sign up date" selected="True" input="Right_" />
+                <SelectField field="Right_First name" selected="True" input="Right_" />
+                <SelectField field="Right_Last name" selected="True" input="Right_" />
+                <SelectField field="Right_Email address" selected="True" input="Right_" />
+                <SelectField field="Right_Subscribed to newsletter?" selected="True" input="Right_" />
+                <SelectField field="Right_Active supporter?" selected="True" input="Right_" />
+                <SelectField field="Right_Frequency of recurring payment" selected="True" input="Right_" />
+                <SelectField field="Right_Recurring contribution amount?" selected="True" input="Right_" />
+                <SelectField field="Right_Total contributions to date" selected="True" input="Right_" />
+                <SelectField field="Right_Currency" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>retain SFTP host details for downstream</AnnotationText>
+          <DefaultAnnotationText>retain SFTP host details for downstream</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="330" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Sign up date" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sign up date - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="102">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="522" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>sequence_nr</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="104">
+      <GuiSettings>
+        <Position x="222" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OutputFormat">yyyy-MM-dd hh:mm:ss</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>DatetimeStamp</AnnotationText>
+          <DefaultAnnotationText>DatetimeStamp</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="DateTimeNow.yxmc" />
+    </Node>
+    <Node ToolID="105">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="906" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_DateTimeNow" selected="True" rename="record_load_dts" input="Source_" type="DateTime" size="19" />
+                <SelectField field="Target_sequence_nr" selected="True" input="Target_" />
+                <SelectField field="Target_ID" selected="True" rename="TransactionID" input="Target_" />
+                <SelectField field="Target_Transaction date" selected="True" input="Target_" />
+                <SelectField field="Target_Sign up date" selected="True" input="Target_" />
+                <SelectField field="Target_First name" selected="True" input="Target_" />
+                <SelectField field="Target_Last name" selected="True" input="Target_" />
+                <SelectField field="Target_Email address" selected="True" input="Target_" />
+                <SelectField field="Target_Amount of transaction" selected="True" input="Target_" />
+                <SelectField field="Target_Frequency" selected="True" input="Target_" />
+                <SelectField field="Target_Currency" selected="True" input="Target_" />
+                <SelectField field="Target_Payment status" selected="True" input="Target_" />
+                <SelectField field="Target_Metadata" selected="True" input="Target_" />
+                <SelectField field="Target_URL Source" selected="True" input="Target_" />
+                <SelectField field="Target_Newsletter preference" selected="True" input="Target_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="906" y="1086" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Source_DateTimeNow" selected="True" rename="record_load_dts" input="Source_" type="DateTime" size="19" />
+                <SelectField field="Target_sequence_nr" selected="True" input="Target_" />
+                <SelectField field="Target_TransactionID" selected="True" input="Target_" />
+                <SelectField field="Target_Sign up date" selected="True" input="Target_" />
+                <SelectField field="Target_First name" selected="True" input="Target_" />
+                <SelectField field="Target_Last name" selected="True" input="Target_" />
+                <SelectField field="Target_Email address" selected="True" input="Target_" />
+                <SelectField field="Target_Currency" selected="True" input="Target_" />
+                <SelectField field="Target_Subscribed to newsletter?" selected="True" input="Target_" />
+                <SelectField field="Target_Active supporter?" selected="True" input="Target_" />
+                <SelectField field="Target_Frequency of recurring payment" selected="True" input="Target_" />
+                <SelectField field="Target_Recurring contribution amount?" selected="True" input="Target_" />
+                <SelectField field="Target_Total contributions to date" selected="True" input="Target_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="107">
+      <GuiSettings>
+        <Position x="1002" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (11)">"record_load_dts","sequence_nr","TransactionID","Transaction date","Sign up date","First name","Last name","Email address","Amount of transaction","Frequency","Currency","Payment status","Metadata","URL Source","Newsletter preference"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="108">
+      <GuiSettings>
+        <Position x="1002" y="1086" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="List Box (11)">"record_load_dts","sequence_nr","TransactionID","Sign up date","First name","Last name","Email address","Currency","Subscribed to newsletter?","Active supporter?","Frequency of recurring payment","Recurring contribution amount?","Total contributions to date"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">False</Value>
+          <Value name="Check Box (122)">False</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="109">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1098" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [First name] = ''&#xA;THEN null()&#xA;ELSE  [First name]&#xA;ENDIF" field="First name" size="254" type="V_String" />
+            <FormulaField expression="IF [Last name]=''&#xA;THEN null()&#xA;ELSE  [Last name]&#xA;ENDIF" field="Last name" size="254" type="V_String" />
+            <FormulaField expression="IF IsEmpty([Email address])&#xA;THEN [Last name]&#xA;ELSE  [Email address]&#xA;ENDIF" field="Email address" size="254" type="V_String" />
+            <FormulaField expression="IF [Amount of transaction] in ('','-')&#xA;THEN null()&#xA;ELSE  [Amount of transaction]&#xA;ENDIF" field="Amount of transaction" size="254" type="V_String" />
+            <FormulaField expression="IF [Frequency]=''&#xA;THEN null()&#xA;ELSE [Frequency]&#xA;ENDIF" field="Frequency" size="254" type="V_String" />
+            <FormulaField expression="IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" field="Currency" size="254" type="V_String" />
+            <FormulaField expression="IF [Payment status] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Payment status]&#xA;ENDIF" field="Payment status" size="254" type="V_String" />
+            <FormulaField expression="IF [Metadata] in ('')&#xA;THEN null()&#xA;ELSE  [Metadata]&#xA;ENDIF" field="Metadata" size="254" type="V_String" />
+            <FormulaField expression="IF [URL Source]= ''&#xA;THEN null()&#xA;ELSE  [URL Source]&#xA;ENDIF" field="URL Source" size="254" type="V_String" />
+            <FormulaField expression="IF [Newsletter preference]=''&#xA;THEN null()&#xA;ELSE  [Newsletter preference]&#xA;ENDIF" field="Newsletter preference" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Clean data</AnnotationText>
+          <DefaultAnnotationText>First name = IF [First name] = ''
+THEN null()
+ELSE  [First name]
+ENDIF
+Last name...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1194" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Payment status" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1326" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Payment status" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2154" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">%User.env_db%|||presspatron.payment</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%User.env_db%
+Table=presspatron.payment</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1278" y="834" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[Frequency] != 'One-time' and Left([Payment status],7) = 'Success'</Expression>
+          <Mode>Custom</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>
+            </Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-08-10 16:45:43</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>
+              </Operand>
+              <StartDate>2020-08-10 16:45:43</StartDate>
+              <EndDate>2020-08-10 16:45:43</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Frequency] != 'One-time' and Left([Payment status],7) = 'Success'</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="1470" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Email address" order="Ascending" />
+            <Field field="Frequency" order="Ascending" />
+            <Field field="Sign up date" order="Ascending" />
+            <Field field="Transaction date" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Email address - Ascending
+Frequency - Ascending
+Sign up date - Ascending
+Transaction date - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="135">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="1554" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name>sequence_nr</UpdateField_Name>
+          <CreateField_Name>nbr_of_payment</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:nbr_of_payment]+1</Expression>
+          <GroupByFields>
+            <Field field="Email address" />
+            <Field field="Sign up date" />
+            <Field field="Frequency" />
+            <Field field="Amount of transaction" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>count recurring payment</AnnotationText>
+          <DefaultAnnotationText>[Row-1:nbr_of_payment]+1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="136">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1434" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="sequence_nr" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="sequence_nr" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_record_load_dts" selected="True" input="Left_" />
+                <SelectField field="Left_sequence_nr" selected="True" input="Left_" />
+                <SelectField field="Left_TransactionID" selected="True" input="Left_" />
+                <SelectField field="Left_Transaction date" selected="True" input="Left_" />
+                <SelectField field="Left_Amount of transaction" selected="True" input="Left_" />
+                <SelectField field="Left_Frequency" selected="True" input="Left_" />
+                <SelectField field="Left_Currency" selected="True" input="Left_" />
+                <SelectField field="Left_Payment status" selected="True" input="Left_" />
+                <SelectField field="Right_nbr_of_payment" selected="True" input="Right_" />
+                <SelectField field="Right_sequence_nr" selected="False" rename="Right_sequence_nr" input="Right_" />
+                <SelectField field="Right_Transaction date" selected="False" rename="Right_Transaction date" input="Right_" />
+                <SelectField field="Right_Sign up date" selected="False" input="Right_" />
+                <SelectField field="Right_Email address" selected="False" input="Right_" />
+                <SelectField field="Right_Amount of transaction" selected="False" rename="Right_Amount of transaction" input="Right_" />
+                <SelectField field="Right_Frequency" selected="False" rename="Right_Frequency" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="137">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2022" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Payment status" selected="True" />
+            <SelectField field="nbr_of_payment" selected="True" />
+            <SelectField field="record_source" selected="True" />
+            <SelectField field="hash_key" selected="True" />
+            <SelectField field="hash_diff" selected="True" />
+            <SelectField field="concat_diff" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="138">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1578" y="738" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <AutoResetMode>ByName</AutoResetMode>
+          <MultiMetaInfo>
+            <MetaInfo name="#1">
+              <RecordInfo>
+                <Field name="record_load_dts" source="DateTime: From yyyy-MM-dd hh:mm:ss" type="DateTime" column="1" />
+                <Field name="sequence_nr" source="Formula: IF [_CurrentFieldName_] IN(&quot;record_load_dts&quot;,&quot;sequence_nr&quot;,&quot;TransactionID&quot;,&quot;Transaction date&quot;,&quot;Sign up date&quot;,&quot;First name&quot;,&quot;Last name&quot;,&quot;Email address&quot;,&quot;Amount of transaction&quot;,&quot;Frequency&quot;,&quot;Currency&quot;,&quot;Payment status&quot;,&quot;Metadata&quot;,&quot;URL Source&quot;,&quot;Newsletter preference&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" column="2" />
+                <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_String" column="3" />
+                <Field name="Transaction date" size="254" source="Formula: [_CurrentField_]" type="V_String" column="4" />
+                <Field name="Amount of transaction" size="254" source="Formula: IF [Amount of transaction] in ('','-')&#xA;THEN null()&#xA;ELSE  [Amount of transaction]&#xA;ENDIF" type="V_String" column="5" />
+                <Field name="Frequency" size="254" source="Formula: IF [Frequency]=''&#xA;THEN null()&#xA;ELSE [Frequency]&#xA;ENDIF" type="V_String" column="6" />
+                <Field name="Currency" size="254" source="Formula: IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" type="V_String" column="7" />
+                <Field name="Payment status" size="254" source="Formula: IF [Payment status] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Payment status]&#xA;ENDIF" type="V_String" column="8" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo name="#2">
+              <RecordInfo>
+                <Field name="record_load_dts" source="DateTime: From yyyy-MM-dd hh:mm:ss" type="DateTime" column="1" />
+                <Field name="sequence_nr" source="Formula: IF [_CurrentFieldName_] IN(&quot;record_load_dts&quot;,&quot;sequence_nr&quot;,&quot;TransactionID&quot;,&quot;Transaction date&quot;,&quot;Sign up date&quot;,&quot;First name&quot;,&quot;Last name&quot;,&quot;Email address&quot;,&quot;Amount of transaction&quot;,&quot;Frequency&quot;,&quot;Currency&quot;,&quot;Payment status&quot;,&quot;Metadata&quot;,&quot;URL Source&quot;,&quot;Newsletter preference&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" column="2" />
+                <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_String" column="3" />
+                <Field name="Transaction date" size="254" source="Formula: [_CurrentField_]" type="V_String" column="4" />
+                <Field name="Amount of transaction" size="254" source="Formula: IF [Amount of transaction] in ('','-')&#xA;THEN null()&#xA;ELSE  [Amount of transaction]&#xA;ENDIF" type="V_String" column="5" />
+                <Field name="Frequency" size="254" source="Formula: IF [Frequency]=''&#xA;THEN null()&#xA;ELSE [Frequency]&#xA;ENDIF" type="V_String" column="6" />
+                <Field name="Currency" size="254" source="Formula: IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" type="V_String" column="7" />
+                <Field name="Payment status" size="254" source="Formula: IF [Payment status] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Payment status]&#xA;ENDIF" type="V_String" column="8" />
+                <Field description="Formula: [Row-1:nbr_of_payment]+1" name="nbr_of_payment" source="Formula: [Row-1:nbr_of_payment]+1" type="Int32" column="9" />
+              </RecordInfo>
+            </MetaInfo>
+          </MultiMetaInfo>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ManualDelayed</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="140">
+      <GuiSettings>
+        <Position x="1794" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Text Box (8)">concat_diff</Value>
+          <Value name="Text Box (18)">|</Value>
+          <Value name="Check Box (15)">False</Value>
+          <Value name="List Box (4)">ToString([TransactionID])+"|||"+ToString([Transaction date])+"|||"+ToString([Amount of transaction])+"|||"+ToString([Frequency])+"|||"+ToString([Currency])+"|||"+ToString([Payment status])+"|||"+ToString([nbr_of_payment])</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Concat diff</AnnotationText>
+          <DefaultAnnotationText>Concat diff</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output6">
+          <RecordInfo>
+            <Field name="record_load_dts" source="DateTime: From yyyy-MM-dd hh:mm:ss (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="sequence_nr" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+            <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Transaction date" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Amount of transaction" size="254" source="Formula: IF [Amount of transaction] in ('','-')&#xA;THEN null()&#xA;ELSE  [Amount of transaction]&#xA;ENDIF" type="V_WString" />
+            <Field name="Frequency" size="254" source="Formula: IF [Frequency]=''&#xA;THEN null()&#xA;ELSE [Frequency]&#xA;ENDIF" type="V_WString" />
+            <Field name="Currency" size="254" source="Formula: IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" type="V_WString" />
+            <Field name="Payment status" size="254" source="Formula: IF [Payment status] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Payment status]&#xA;ENDIF" type="V_WString" />
+            <Field description="Formula: [Row-1:nbr_of_payment]+1" name="nbr_of_payment" source="Formula: [Row-1:nbr_of_payment]+1" type="Int32" />
+            <Field name="concat_diff" size="1073741823" source="Formula: Replace([__Concatenate__],&quot;|||&quot;,&quot;|&quot;)" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="record_load_dts" order="Asc" />
+            <Field field="TransactionID" order="Asc" />
+            <Field field="Transaction date" order="Asc" />
+            <Field field="Amount of transaction" order="Asc" />
+            <Field field="Frequency" order="Asc" />
+            <Field field="Currency" order="Asc" />
+            <Field field="Payment status" order="Asc" />
+            <Field field="nbr_of_payment" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Concatenate.yxmc" />
+    </Node>
+    <Node ToolID="141">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1914" y="810" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'PRESSPATRON'" field="record_source" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + toString([TransactionID]) + '/' + [Payment status]&#xA;)" field="hash_key" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + concat_diff&#xA;)" field="hash_diff" size="32" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Hash keys</AnnotationText>
+          <DefaultAnnotationText>record_source = 'PRESSPATRON'
+hash_key = MD5_ASCII(
+[record_source] + '|' + toSt...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="142">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1878" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">%User.env_db%|||presspatron.donation_csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%User.env_db%
+Table=presspatron.donation_csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="152">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="1674" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="record_load_dts" />
+            <Field field="TransactionID" />
+            <Field field="Transaction date" />
+            <Field field="Amount of transaction" />
+            <Field field="Frequency" />
+            <Field field="Currency" />
+            <Field field="Payment status" />
+            <Field field="nbr_of_payment" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="95">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2154" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">%User.env_db%|||presspatron.supporter</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%User.env_db%
+Table=presspatron.supporter</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1098" y="1086" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="IF [First name] = ''&#xA;THEN null()&#xA;ELSE  [First name]&#xA;ENDIF" field="First name" size="254" type="V_String" />
+            <FormulaField expression="IF [Last name]=''&#xA;THEN null()&#xA;ELSE  [Last name]&#xA;ENDIF" field="Last name" size="254" type="V_String" />
+            <FormulaField expression="IF IsEmpty([Email address])&#xA;THEN [Last name]&#xA;ELSE  [Email address]&#xA;ENDIF" field="Email address" size="254" type="V_String" />
+            <FormulaField expression="tonumber(IF [Total contributions to date] in ('','-')&#xA;THEN null()&#xA;ELSE  [Total contributions to date]&#xA;ENDIF)" field="Total contributions to date" size="254" type="V_String" />
+            <FormulaField expression="IF [Subscribed to newsletter?]=''&#xA;THEN null()&#xA;ELSE [Subscribed to newsletter?]&#xA;ENDIF" field="Subscribed to newsletter?" size="254" type="V_String" />
+            <FormulaField expression="IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" field="Currency" size="254" type="V_String" />
+            <FormulaField expression="IF [Active supporter?] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Active supporter?]&#xA;ENDIF" field="Active supporter?" size="254" type="V_String" />
+            <FormulaField expression="tonumber(IF [Recurring contribution amount?] in ('')&#xA;THEN null()&#xA;ELSE Replace([Recurring contribution amount?],'.00','')&#xA;ENDIF)" field="Recurring contribution amount?" size="254" type="V_String" />
+            <FormulaField expression="IF [Frequency of recurring payment]= ''&#xA;THEN null()&#xA;ELSE  [Frequency of recurring payment]&#xA;ENDIF" field="Frequency of recurring payment" size="254" type="V_String" />
+            <FormulaField expression="IF IsEmpty([Frequency of recurring payment])&#xA;THEN 'One-time'&#xA;ELSE  Uppercase(Left([Frequency of recurring payment],1)) + RIGHT([Frequency of recurring payment],length([Frequency of recurring payment])-1)&#xA;ENDIF" field="Frequency" size="1073741823" type="V_WString" />
+            <FormulaField expression="tonumber(If [Frequency] = 'One-time' then [Total contributions to date] else&#xA;[Recurring contribution amount?]&#xA;endif)" field="Transaction_amt" size="19.1" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Clean data</AnnotationText>
+          <DefaultAnnotationText>First name = IF [First name] = ''
+THEN null()
+ELSE  [First name]
+ENDIF
+Last name...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings>
+        <Position x="1794" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Text Box (8)">concat_diff</Value>
+          <Value name="Text Box (18)">|</Value>
+          <Value name="Check Box (15)">False</Value>
+          <Value name="List Box (4)">ToString([TransactionID])+"|||"+ToString([Sign up date])+"|||"+ToString([First name])+"|||"+ToString([Last name])+"|||"+ToString([Email address])+"|||"+ToString([Currency])+"|||"+ToString([Subscribed to newsletter?])+"|||"+ToString([Active supporter?])+"|||"+ToString([Frequency of recurring payment])+"|||"+ToString([Recurring contribution amount?])+"|||"+ToString([Total contributions to date])</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Concat diff</AnnotationText>
+          <DefaultAnnotationText>Concat diff</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output6">
+          <RecordInfo>
+            <Field name="record_load_dts" source="(Multiple Sources)" type="DateTime" />
+            <Field name="sequence_nr" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+            <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Sign up date" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="First name" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Last name" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Email address" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Currency" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Subscribed to newsletter?" size="254" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Active supporter?" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Frequency of recurring payment" size="1073741823" source="Formula: (Multiple Sources)" type="V_WString" />
+            <Field name="Recurring contribution amount?" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="Total contributions to date" size="254" source="(Multiple Sources)" type="V_WString" />
+            <Field name="concat_diff" size="1073741823" source="Formula: Replace([__Concatenate__],&quot;|||&quot;,&quot;|&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Concatenate.yxmc" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1194" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="First name" selected="True" />
+            <SelectField field="Last name" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Subscribed to newsletter?" selected="True" />
+            <SelectField field="Active supporter?" selected="True" />
+            <SelectField field="Frequency of recurring payment" selected="True" />
+            <SelectField field="Recurring contribution amount?" selected="True" />
+            <SelectField field="Total contributions to date" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Transaction_amt" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1914" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'PRESSPATRON'" field="record_source" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + toString([TransactionID])&#xA;)" field="hash_key" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + concat_diff&#xA;)" field="hash_diff" size="32" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Hash keys</AnnotationText>
+          <DefaultAnnotationText>record_source = 'PRESSPATRON'
+hash_key = MD5_ASCII(
+[record_source] + '|' + toSt...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2022" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="First name" selected="True" />
+            <SelectField field="Last name" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Subscribed to newsletter?" selected="True" />
+            <SelectField field="Active supporter?" selected="True" />
+            <SelectField field="Frequency of recurring payment" selected="True" />
+            <SelectField field="Recurring contribution amount?" selected="True" />
+            <SelectField field="Total contributions to date" selected="True" />
+            <SelectField field="record_source" selected="True" />
+            <SelectField field="hash_key" selected="True" />
+            <SelectField field="hash_diff" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="127">
+      <GuiSettings>
+        <Position x="1794" y="978" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Text Box (8)">concat_diff</Value>
+          <Value name="Text Box (18)">|</Value>
+          <Value name="Check Box (15)">False</Value>
+          <Value name="List Box (4)">ToString([Frequency])+"|||"+ToString([TransactionID])</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Concat diff</AnnotationText>
+          <DefaultAnnotationText>Concat diff</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output6">
+          <RecordInfo>
+            <Field name="record_load_dts" source="Summarize: GroupBy - record_load_dts" type="DateTime" />
+            <Field name="Frequency" size="254" source="Summarize: GroupBy - Frequency" type="V_WString" />
+            <Field name="sequence_nr" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+            <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="concat_diff" size="1073741823" source="Formula: Replace([__Concatenate__],&quot;|||&quot;,&quot;|&quot;)" type="V_WString" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="record_load_dts" order="Asc" />
+            <Field field="Frequency" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Concatenate.yxmc" />
+    </Node>
+    <Node ToolID="128">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1914" y="978" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'PRESSPATRON'" field="record_source" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + toString([Frequency])&#xA;)" field="hash_key" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + concat_diff&#xA;)" field="hash_diff" size="32" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Hash keys</AnnotationText>
+          <DefaultAnnotationText>record_source = 'PRESSPATRON'
+hash_key = MD5_ASCII(
+[record_source] + '|' + toSt...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="129">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2022" y="978" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="record_source" selected="True" />
+            <SelectField field="hash_key" selected="True" />
+            <SelectField field="hash_diff" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="130">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2154" y="978" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">%User.env_db%|||presspatron.period</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%User.env_db%
+Table=presspatron.period</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="131">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1218" y="966" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="record_load_dts" action="GroupBy" rename="record_load_dts" />
+            <SummarizeField field="Frequency" action="GroupBy" rename="Frequency" />
+            <SummarizeField field="sequence_nr" action="Min" rename="sequence_nr" />
+            <SummarizeField field="TransactionID" action="Min" rename="TransactionID" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Selection of each new Period</AnnotationText>
+          <DefaultAnnotationText>Selection of each new Period</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="143">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1458" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="Email address" />
+            <Field field="Sign up date" />
+            <Field field="Frequency" />
+            <Field field="transaction_amt" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="Email address" />
+            <Field field="Sign up date" />
+            <Field field="Frequency" />
+            <Field field="Transaction_amt" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_record_load_dts" selected="True" rename="Right_record_load_dts" input="Right_" />
+                <SelectField field="Right_sequence_nr" selected="True" rename="Right_sequence_nr" input="Right_" />
+                <SelectField field="Right_TransactionID" selected="True" rename="Right_TransactionID" input="Right_" />
+                <SelectField field="Right_Sign up date" selected="True" rename="Right_Sign up date" input="Right_" />
+                <SelectField field="Right_First name" selected="True" rename="Right_First name" input="Right_" />
+                <SelectField field="Right_Last name" selected="True" rename="Right_Last name" input="Right_" />
+                <SelectField field="Right_Email address" selected="True" rename="Right_Email address" input="Right_" />
+                <SelectField field="Right_Currency" selected="True" rename="Right_Currency" input="Right_" />
+                <SelectField field="Right_Frequency" selected="True" rename="Right_Frequency" input="Right_" />
+                <SelectField field="Right_Transaction_amt" selected="True" rename="Right_Transaction_amt" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="144">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1602" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <AutoResetMode>Custom</AutoResetMode>
+          <MultiMetaInfo>
+            <MetaInfo name="#1">
+              <RecordInfo>
+                <Field name="record_load_dts" source="DateTime: From yyyy-MM-dd hh:mm:ss" type="DateTime" column="1" />
+                <Field name="sequence_nr" source="Formula: IF [_CurrentFieldName_] IN(&quot;record_load_dts&quot;,&quot;sequence_nr&quot;,&quot;TransactionID&quot;,&quot;Sign up date&quot;,&quot;First name&quot;,&quot;Last name&quot;,&quot;Email address&quot;,&quot;Currency&quot;,&quot;Subscribed to newsletter?&quot;,&quot;Active supporter?&quot;,&quot;Frequency of recurring payment&quot;,&quot;Recurring contribution amount?&quot;,&quot;Total contributions to date&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" column="2" />
+                <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_String" column="3" />
+                <Field name="Sign up date" size="254" source="Formula: [_CurrentField_]" type="V_String" column="4" />
+                <Field name="First name" size="254" source="Formula: IF [First name] = ''&#xA;THEN null()&#xA;ELSE  [First name]&#xA;ENDIF" type="V_String" column="5" />
+                <Field name="Last name" size="254" source="Formula: IF [Last name]=''&#xA;THEN null()&#xA;ELSE  [Last name]&#xA;ENDIF" type="V_String" column="6" />
+                <Field name="Email address" size="254" source="Formula: IF IsEmpty([Email address])&#xA;THEN [Last name]&#xA;ELSE  [Email address]&#xA;ENDIF" type="V_String" column="7" />
+                <Field name="Currency" size="254" source="Formula: IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" type="V_String" column="8" />
+                <Field name="Subscribed to newsletter?" size="254" source="Formula: IF [Subscribed to newsletter?]=''&#xA;THEN null()&#xA;ELSE [Subscribed to newsletter?]&#xA;ENDIF" type="V_String" column="9" />
+                <Field name="Active supporter?" size="254" source="Formula: IF [Active supporter?] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Active supporter?]&#xA;ENDIF" type="V_String" column="10" />
+                <Field name="Frequency of recurring payment" size="254" source="Formula: IF [Frequency of recurring payment]= ''&#xA;THEN null()&#xA;ELSE  [Frequency of recurring payment]&#xA;ENDIF" type="V_String" column="11" />
+                <Field name="Recurring contribution amount?" size="254" source="Formula: tonumber(IF [Recurring contribution amount?] in ('')&#xA;THEN null()&#xA;ELSE Replace([Recurring contribution amount?],'.00','')&#xA;ENDIF)" type="V_String" column="12" />
+                <Field name="Total contributions to date" size="254" source="Formula: tonumber(IF [Total contributions to date] in ('','-')&#xA;THEN null()&#xA;ELSE  [Total contributions to date]&#xA;ENDIF)" type="V_String" column="13" />
+                <Field name="Frequency" size="1073741823" source="Formula: IF IsEmpty([Frequency of recurring payment])&#xA;THEN 'One-time'&#xA;ELSE  Uppercase(Left([Frequency of recurring payment],1)) + RIGHT([Frequency of recurring payment],length([Frequency of recurring payment])-1)&#xA;ENDIF" type="V_WString" column="14" />
+                <Field name="Transaction_amt" scale="1" size="19" source="Formula: tonumber(If [Frequency] = 'One-time' then [Total contributions to date] else&#xA;[Recurring contribution amount?]&#xA;endif)" type="FixedDecimal" column="15" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo name="#2">
+              <RecordInfo>
+                <Field name="record_load_dts" source="Summarize: GroupBy - record_load_dts" type="DateTime" column="1" />
+                <Field name="sequence_nr" source="Formula: IF [_CurrentFieldName_] IN(&quot;record_load_dts&quot;,&quot;sequence_nr&quot;,&quot;TransactionID&quot;,&quot;Transaction date&quot;,&quot;Sign up date&quot;,&quot;First name&quot;,&quot;Last name&quot;,&quot;Email address&quot;,&quot;Amount of transaction&quot;,&quot;Frequency&quot;,&quot;Currency&quot;,&quot;Payment status&quot;,&quot;Metadata&quot;,&quot;URL Source&quot;,&quot;Newsletter preference&quot;) THEN   &#xA;       IF IsNull([_CurrentField_]) THEN &#xA;	    IF ( [_CurrentFieldType_] IN ('Byte', 'Int16', 'Int32', 'Int64', 'Float', 'Double', 'FixedDecimal')) THEN&#xA;       	0&#xA;    	    ELSE [_CurrentField_]&#xA;	    ENDIF&#xA;	ELSE [_CurrentField_]&#xA;	ENDIF&#xA;    ELSE [_CurrentField_]&#xA;    ENDIF" type="Int32" column="2" />
+                <Field name="TransactionID" size="254" source="Formula: [_CurrentField_]" type="V_String" column="3" />
+                <Field name="Sign up date" size="254" source="Summarize: GroupBy - Sign up date" type="V_String" column="4" />
+                <Field name="First name" size="254" source="Summarize: GroupBy - First name" type="V_String" column="5" />
+                <Field name="Last name" size="254" source="Summarize: GroupBy - Last name" type="V_String" column="6" />
+                <Field name="Email address" size="254" source="Summarize: GroupBy - Email address" type="V_String" column="7" />
+                <Field name="Currency" size="254" source="Summarize: GroupBy - Currency" type="V_String" column="8" />
+                <Field name="Max_Newsletter preference" size="254" source="Formula: IF [Newsletter preference]=''&#xA;THEN null()&#xA;ELSE  [Newsletter preference]&#xA;ENDIF" type="V_String" column="9" />
+                <Field name="Active supporter" size="1073741823" source="Formula: If [Frequency] = 'One-time' Then 'No'&#xA;Else 'Yes'&#xA;Endif" type="V_WString" column="10" />
+                <Field name="Frequency of recurring" size="1073741823" source="Formula: IF IsEmpty([Frequency])&#xA;THEN Null()&#xA;ELSE  lowercase(Left([Frequency],1)) + RIGHT([Frequency],length([Frequency])-1)&#xA;ENDIF" type="V_WString" column="11" />
+                <Field name="Recurring payment" scale="1" size="19" source="Summarize: GroupBy - Recurring payment" type="FixedDecimal" column="12" />
+                <Field name="Sum_Total Contribution" scale="1" size="24" source="Summarize: Sum - Total Contribution" type="FixedDecimal" column="13" />
+                <Field name="Frequency" size="254" source="Summarize: GroupBy - Frequency" type="V_String" column="14" />
+                <Field name="Amount of transaction" size="254" source="Summarize: GroupBy - Amount of transaction" type="V_String" column="15" />
+                <Field name="Min_Transaction date" size="254" source="Formula: [_CurrentField_]" type="V_String" column="16" />
+                <Field name="Min_Metadata" size="254" source="Formula: IF [Metadata] in ('')&#xA;THEN null()&#xA;ELSE  [Metadata]&#xA;ENDIF" type="V_String" column="17" />
+                <Field name="Min_URL Source" size="254" source="Formula: IF [URL Source]= ''&#xA;THEN null()&#xA;ELSE  [URL Source]&#xA;ENDIF" type="V_String" column="18" />
+                <Field name="Last_Payment status" size="254" source="Formula: IF [Payment status] IN ('','-')&#xA;THEN null()&#xA;ELSE  [Payment status]&#xA;ENDIF" type="V_String" column="19" />
+                <Field name="transaction_amt" scale="1" size="19" source="Summarize: GroupBy - transaction_amt" type="FixedDecimal" column="20" />
+              </RecordInfo>
+            </MetaInfo>
+          </MultiMetaInfo>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ManualDelayed</Mode>
+          <SetOutputOrder value="True" />
+          <OutputOrder>
+            <Connection>#1</Connection>
+            <Connection>#2</Connection>
+          </OutputOrder>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="1386" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="record_load_dts" action="GroupBy" rename="record_load_dts" />
+            <SummarizeField field="sequence_nr" action="Min" rename="sequence_nr" />
+            <SummarizeField field="TransactionID" action="Min" rename="TransactionID" />
+            <SummarizeField field="Transaction date" action="Min" rename="Min_Transaction date" />
+            <SummarizeField field="Sign up date" action="GroupBy" rename="Sign up date" />
+            <SummarizeField field="First name" action="GroupBy" rename="First name" />
+            <SummarizeField field="Last name" action="GroupBy" rename="Last name" />
+            <SummarizeField field="Email address" action="GroupBy" rename="Email address" />
+            <SummarizeField field="Amount of transaction" action="GroupBy" rename="Amount of transaction" />
+            <SummarizeField field="Frequency" action="GroupBy" rename="Frequency" />
+            <SummarizeField field="Currency" action="GroupBy" rename="Currency" />
+            <SummarizeField field="Payment status" action="Last" rename="Last_Payment status" />
+            <SummarizeField field="Metadata" action="Min" rename="Min_Metadata" />
+            <SummarizeField field="URL Source" action="Min" rename="Min_URL Source" />
+            <SummarizeField field="Newsletter preference" action="Max" rename="Max_Newsletter preference" />
+            <SummarizeField field="Total Contribution" action="Sum" rename="Sum_Total Contribution" />
+            <SummarizeField field="Recurring payment" action="GroupBy" rename="Recurring payment" />
+            <SummarizeField field="Active supporter" action="Max" rename="Active supporter" />
+            <SummarizeField field="Frequency of recurring" action="Min" rename="Frequency of recurring" />
+            <SummarizeField field="transaction_amt" action="GroupBy" rename="transaction_amt" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1206" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="If [Frequency] = 'One-time' Then 'No'&#xA;Else 'Yes'&#xA;Endif" field="Active supporter" size="1073741823" type="V_WString" />
+            <FormulaField expression="tonumber(If [Frequency] = 'One-time' Then 0&#xA;Else replace([Amount of transaction],'.0','')&#xA;Endif)" field="Recurring payment" size="19.1" type="FixedDecimal" />
+            <FormulaField expression="ToNumber([Amount of transaction])&#xA;" field="Total Contribution" size="19.1" type="FixedDecimal" />
+            <FormulaField expression="IF IsEmpty([Frequency])&#xA;THEN Null()&#xA;ELSE  lowercase(Left([Frequency],1)) + RIGHT([Frequency],length([Frequency])-1)&#xA;ENDIF" field="Frequency of recurring" size="1073741823" type="V_WString" />
+            <FormulaField expression="tonumber([Amount of transaction])" field="transaction_amt" size="19.1" type="FixedDecimal" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Active supporter = If [Frequency] = 'One-time' Then 'No'
+Else 'Yes'
+Endif
+Recurr...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="149">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1710" y="1110" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="TransactionID" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="First name" selected="True" />
+            <SelectField field="Last name" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Subscribed to newsletter?" selected="True" />
+            <SelectField field="Active supporter?" selected="True" />
+            <SelectField field="Frequency of recurring payment" selected="True" />
+            <SelectField field="Recurring contribution amount?" selected="True" />
+            <SelectField field="Total contributions to date" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="150">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1590" y="990" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10784_13aff146411345e68c450f1b079fcb19_\Engine_7244_109009cd3c434bb49ace6bbb4590f51b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="151">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="1290" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[transaction_amt] &gt; -1</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;</Operator>
+            <Field>transaction_amt</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-08-14 15:58:01</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2020-08-14 15:58:01</StartDate>
+              <EndDate>2020-08-14 15:58:01</EndDate>
+              <Operand>-1</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[transaction_amt] &gt; -1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="65">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2142" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">%User.env_db%|||presspatron.donation</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%User.env_db%
+Table=presspatron.donation</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings>
+        <Position x="1794" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Text Box (8)">concat_diff</Value>
+          <Value name="Text Box (18)">|</Value>
+          <Value name="Check Box (15)">False</Value>
+          <Value name="List Box (4)">ToString([Transaction date])+"|||"+ToString([Sign up date])+"|||"+ToString([Email address])+"|||"+ToString([Amount of transaction])+"|||"+ToString([Frequency])+"|||"+ToString([Currency])+"|||"+ToString([Metadata])+"|||"+ToString([URL Source])</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Concat diff</AnnotationText>
+          <DefaultAnnotationText>Concat diff</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output6">
+          <RecordInfo>
+            <Field name="record_load_dts" source="DateTime: From yyyy-MM-dd hh:mm:ss (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="sequence_nr" source="Formula: IIF(IsNull([_CurrentField_]),0,[_CurrentField_]) (BatchMacro)" type="Int32" />
+            <Field name="Transaction date" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Sign up date" size="254" source="Formula: [_CurrentField_]" type="V_WString" />
+            <Field name="Email address" size="254" source="Formula: IF IsEmpty([Email address])&#xA;THEN [Last name]&#xA;ELSE  [Email address]&#xA;ENDIF" type="V_WString" />
+            <Field name="Amount of transaction" size="254" source="Formula: IF [Amount of transaction] in ('','-')&#xA;THEN null()&#xA;ELSE  [Amount of transaction]&#xA;ENDIF" type="V_WString" />
+            <Field name="Frequency" size="254" source="Formula: IF [Frequency]=''&#xA;THEN null()&#xA;ELSE [Frequency]&#xA;ENDIF" type="V_WString" />
+            <Field name="Currency" size="254" source="Formula: IF [Currency] in ('','-')&#xA;THEN null()&#xA;ELSE  [Currency]&#xA;ENDIF" type="V_WString" />
+            <Field name="Metadata" size="254" source="Formula: IF [Metadata] in ('')&#xA;THEN null()&#xA;ELSE  [Metadata]&#xA;ENDIF" type="V_WString" />
+            <Field name="URL Source" size="254" source="Formula: IF [URL Source]= ''&#xA;THEN null()&#xA;ELSE  [URL Source]&#xA;ENDIF" type="V_WString" />
+            <Field name="concat_diff" size="1073741823" source="Formula: Replace([__Concatenate__],&quot;|||&quot;,&quot;|&quot;)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Concatenate.yxmc" />
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1386" y="641" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Metadata" selected="True" />
+            <SelectField field="URL Source" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="118">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1914" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'PRESSPATRON'" field="record_source" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + [Sign up date] + '/' + [Email address] + '/' + [Frequency] + '/' + [Amount of transaction]&#xA;)" field="hash_key" size="32" type="String" />
+            <FormulaField expression="MD5_ASCII(&#xA;[record_source] + '|' + concat_diff&#xA;)" field="hash_diff" size="32" type="String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Hash keys</AnnotationText>
+          <DefaultAnnotationText>record_source = 'PRESSPATRON'
+hash_key = MD5_ASCII(
+[record_source] + '|' + [Sig...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2022" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Currency" selected="True" />
+            <SelectField field="Metadata" selected="True" />
+            <SelectField field="URL Source" selected="True" />
+            <SelectField field="record_source" selected="True" />
+            <SelectField field="hash_key" selected="True" />
+            <SelectField field="hash_diff" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="153">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1374" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="record_load_dts" selected="False" />
+            <SelectField field="TransactionID" selected="False" />
+            <SelectField field="Email address" selected="True" />
+            <SelectField field="Sign up date" selected="True" />
+            <SelectField field="Frequency" selected="True" />
+            <SelectField field="Amount of transaction" selected="True" />
+            <SelectField field="Transaction date" selected="True" />
+            <SelectField field="sequence_nr" selected="True" />
+            <SelectField field="Currency" selected="False" />
+            <SelectField field="Payment status" selected="False" />
+            <SelectField field="concat_diff" selected="False" />
+            <SelectField field="record_source" selected="False" />
+            <SelectField field="hash_key" selected="False" />
+            <SelectField field="hash_diff" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="426" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="ID" />
+            <Field field="Transaction date" />
+            <Field field="Sign up date" />
+            <Field field="First name" />
+            <Field field="Last name" />
+            <Field field="Email address" />
+            <Field field="Amount of transaction" />
+            <Field field="Frequency" />
+            <Field field="Currency" />
+            <Field field="Payment status" />
+            <Field field="Metadata" />
+            <Field field="URL Source" />
+            <Field field="Newsletter preference" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="155">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="426" y="1074" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Sign up date" />
+            <Field field="First name" />
+            <Field field="Last name" />
+            <Field field="Email address" />
+            <Field field="Subscribed to newsletter?" />
+            <Field field="Active supporter?" />
+            <Field field="Frequency of recurring payment" />
+            <Field field="Recurring contribution amount?" />
+            <Field field="Total contributions to date" />
+            <Field field="Currency" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="156">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+        <Position x="54" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Directory>d:\data\cdw_srcdata_extract\presspatron</Directory>
+          <FileSpec>supporter*.csv</FileSpec>
+          <IncludeSubDirs value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir d:\data\cdw_srcdata_extract\presspatron\supporter*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+    </Node>
+    <Node ToolID="157">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="138" y="1062" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="FullPath" action="Max" rename="Max_FullPath" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="158">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="222" y="1026" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="Path" RecordLimit="" SearchSubDirs="False" FileFormat="0">E:\data\cdw_srcdata_extract\presspatron\supporter_database_2020-09-18.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>Max_FullPath</ReadList_Field>
+          <ReadList_Type>Path</ReadList_Type>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="159">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+        <Position x="78" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Directory>d:\data\cdw_srcdata_extract\presspatron</Directory>
+          <FileSpec>transaction*.csv</FileSpec>
+          <IncludeSubDirs value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir d:\data\cdw_srcdata_extract\presspatron\transaction*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+    </Node>
+    <Node ToolID="160">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="162" y="726" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="FullPath" action="Max" rename="Max_FullPath" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="161">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="246" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="Path" RecordLimit="" SearchSubDirs="False" FileFormat="0">E:\data\cdw_srcdata_extract\presspatron\transaction_database_2020-10-16.csv</File>
+              <FormatSpecificOptions>
+                <CodePage>28591</CodePage>
+                <Delimeter>,</Delimeter>
+                <IgnoreErrors>False</IgnoreErrors>
+                <FieldLen>254</FieldLen>
+                <AllowShareWrite>False</AllowShareWrite>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>Max_FullPath</ReadList_Field>
+          <ReadList_Type>Path</ReadList_Type>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="84">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="942" y="510" width="684" height="146" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Debug Output</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="55">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="967" y="572" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10784_13aff146411345e68c450f1b079fcb19_\Engine_7244_d5f7620e283248f0b695e4cbeb70bb72_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1410" y="559" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10784_13aff146411345e68c450f1b079fcb19_\Engine_7244_e96f527619f8427ab5480b7ebb59e0fe_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="117">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1542" y="559" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\ProgramData\Alteryx\Engine\Engine_10784_13aff146411345e68c450f1b079fcb19_\Engine_7244_25aafde866a44e5cb54e7d08d38b03e2_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output2" />
+      <Destination ToolID="99" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="102" Connection="Output" />
+      <Destination ToolID="99" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="51" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="62" Connection="Output" />
+      <Destination ToolID="51" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="51" Connection="Right" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="55" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="60" Connection="Output" />
+      <Destination ToolID="154" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="105" Connection="Targets" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="105" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="94" Connection="Output" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="106" Connection="Targets" />
+    </Connection>
+    <Connection Wireless="True">
+      <Origin ToolID="104" Connection="Output" />
+      <Destination ToolID="106" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Right" />
+      <Destination ToolID="94" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="101" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="105" Connection="Output" />
+      <Destination ToolID="107" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="106" Connection="Output" />
+      <Destination ToolID="108" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="107" Connection="Output26" />
+      <Destination ToolID="109" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="108" Connection="Output26" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="131" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="142" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="109" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="115" Connection="Output" />
+      <Destination ToolID="132" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="Output" />
+      <Destination ToolID="136" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="135" Connection="Output" />
+      <Destination ToolID="136" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="132" Connection="True" />
+      <Destination ToolID="153" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="134" Connection="Output" />
+      <Destination ToolID="135" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="136" Connection="Left" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="136" Connection="Join" />
+      <Destination ToolID="138" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="137" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="138" Connection="Output" />
+      <Destination ToolID="152" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="140" Connection="Output6" />
+      <Destination ToolID="141" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="141" Connection="Output" />
+      <Destination ToolID="137" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="152" Connection="Unique" />
+      <Destination ToolID="140" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output6" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="143" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="147" Connection="Output" />
+      <Destination ToolID="143" Connection="Left" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="143" Connection="Left" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="Output" />
+      <Destination ToolID="95" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="127" Connection="Output6" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="128" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="129" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="131" Connection="Output" />
+      <Destination ToolID="127" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="143" Connection="Left" />
+      <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="144" Connection="Output" />
+      <Destination ToolID="149" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="151" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="149" Connection="Output" />
+      <Destination ToolID="112" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="151" Connection="True" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output6" />
+      <Destination ToolID="118" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="111" Connection="Input5" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="118" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="65" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="153" Connection="Output" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="154" Connection="Unique" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="155" Connection="Unique" />
+      <Destination ToolID="102" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="156" Connection="Output" />
+      <Destination ToolID="157" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="157" Connection="Output" />
+      <Destination ToolID="158" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="158" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="159" Connection="Output" />
+      <Destination ToolID="160" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="160" Connection="Output" />
+      <Destination ToolID="161" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="161" Connection="Output" />
+      <Destination ToolID="60" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>env_driveletter</Name>
+        <Value>c:\temp\</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>proddb</Name>
+        <Value>aka:CDW_PROD</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>devdb</Name>
+        <Value>aka:CDW</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>User</Namespace>
+        <Name>env_db</Name>
+        <Value>%User.proddb%</Value>
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>presspatron_sftp_to_stage v2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="649bbcbf-22b9-4683-85c3-62035c3e9d97" />
+      <Telemetry>
+        <PreviousWorkflowId value="" />
+        <OriginWorkflowId value="649bbcbf-22b9-4683-85c3-62035c3e9d97" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+      <Event>
+        <Description>Disabled: Run cmd.exe</Description>
+        <When>Disabled</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>cmd.exe</cmd_Program>
+        <cmd_CommandLine>/C "C:\projects\PressPatron\presspatron_getcsv.bat"</cmd_CommandLine>
+        <cmd_WorkingDir>C:\projects\PressPatron</cmd_WorkingDir>
+        <cmd_Timeout value="600" />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Run load_vault.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\CDW_PROD\load_vault.bat</cmd_Program>
+        <cmd_CommandLine>stage presspatron load_vault</cmd_CommandLine>
+        <cmd_WorkingDir>C:\projects\CDW_PROD\</cmd_WorkingDir>
+        <cmd_Timeout value="1800" />
+      </Event>
+      <Event>
+        <Description>After Run With Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>Error %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterNoError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>Success %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,7 @@
+models:
+  - name: fact_sentiment
+    columns:
+      - name: FACT_ID
+        tests:
+          - unique
+          - not_null

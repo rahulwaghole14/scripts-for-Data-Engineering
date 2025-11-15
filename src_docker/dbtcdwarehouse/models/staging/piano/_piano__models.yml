@@ -1,0 +1,7 @@
+models:
+  - name: stg_piano__subscriptions
+    columns:
+      - name: subscription_id
+        tests:
+          - unique
+          - not_null

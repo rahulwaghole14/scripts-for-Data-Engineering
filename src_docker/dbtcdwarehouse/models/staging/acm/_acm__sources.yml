@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: acm
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+
+    # uncomment for dev access
+#    database: hexa-data-report-etl-dev
+#    schema: rbhaskhar_dw_staging
+
+    tables:
+      - name: acm__print_blacklist_final
+      - name: acm__print_data_blacklist
+      - name: acm__print_data_generic
+      - name: acm__print_generic_final
+      - name: acm__print_subbenefit_final
+      - name: acm__generic_print_subs
+      - name: acm__generic_magazine_print_subs

@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: qualtrics
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: qualtrics__responses
+        description: responses from new api integration
+        columns:
+          - name: responseId
+            description: primary key of qualtrics responses
+            tests:
+              - unique
+              - not_null
+        # freshness:
+        #   warn_after: {count: 24, period: hour}
+        #   error_after: {count: 48, period: hour}
+        loaded_at_field: "PARSE_TIMESTAMP('%Y-%m-%dT%H:%M:%E*SZ', values_recordedDate)"
+
+      - name: qualtrics__news_hub_survey_responses
+        description: responses from qualtrics__news_hub_survey
+        columns:
+          - name: responseId
+            description: primary key of qualtrics responses
+            tests:
+              - unique
+              - not_null
+
+      - name: qualtrics__reader_feedback_survey_responses
+        description: responses from qualtrics__hexa_reader_feedback_survey_responses
+        columns:
+          - name: responseId
+            description: primary key of qualtrics responses
+            tests:
+              - unique
+              - not_null
+
+      - name: qualtrics__news_hub_survey_6th_responses
+        description: responses from qualtrics__news_hub_survey_6th_responses
+        columns:
+          - name: responseId
+            description: primary key of qualtrics responses
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,118 @@
+version: 0.50.2
+type: DeclarativeSource
+check:
+  type: CheckStream
+  stream_names:
+    - Parsely
+streams:
+  - type: DeclarativeStream
+    name: Parsely
+    primary_key: []
+    schema_loader:
+      type: InlineSchemaLoader
+      schema:
+        $schema: http://json-schema.org/schema#
+        properties:
+          data:
+            items:
+              properties:
+                _hits:
+                  type: number
+                author:
+                  type: string
+                authors:
+                  items:
+                    type: string
+                  type: array
+                full_content_word_count:
+                  type: number
+                image_url:
+                  type: string
+                link:
+                  type: string
+                metadata:
+                  type: string
+                metrics:
+                  properties:
+                    views:
+                      type: number
+                  type: object
+                pub_date:
+                  type: string
+                section:
+                  type: string
+                tags:
+                  items:
+                    type: string
+                  type: array
+                thumb_url_medium:
+                  type: string
+                title:
+                  type: string
+                url:
+                  type: string
+              type: object
+            type: array
+          links:
+            properties:
+              first:
+                type: string
+              next:
+                type: string
+            type: object
+          meta:
+            properties:
+              metrics:
+                items:
+                  type: string
+                type: array
+              sort:
+                type: string
+            type: object
+          success:
+            type: boolean
+        type: object
+    retriever:
+      type: SimpleRetriever
+      requester:
+        type: HttpRequester
+        url_base: http://api.parsely.com/v2/
+        path: analytics/posts
+        http_method: GET
+        request_parameters:
+          limit: '10'
+          apikey: hexa.co.nz
+        request_headers: {}
+        authenticator:
+          type: ApiKeyAuthenticator
+          api_token: '{{ config[''api_key''] }}'
+          inject_into:
+            type: RequestOption
+            field_name: secret
+            inject_into: request_parameter
+        request_body_json: {}
+      record_selector:
+        type: RecordSelector
+        extractor:
+          type: DpathExtractor
+          field_path: []
+      paginator:
+        type: NoPagination
+spec:
+  connection_specification:
+    $schema: http://json-schema.org/draft-07/schema#
+    type: object
+    required:
+      - api_key
+    properties:
+      api_key:
+        type: string
+        title: API Key
+        airbyte_secret: true
+        order: 0
+    additionalProperties: true
+  documentation_url: https://example.org
+  type: Spec
+metadata:
+  autoImportSchema:
+    Parsely: true

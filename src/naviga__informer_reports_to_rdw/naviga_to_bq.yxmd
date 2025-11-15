@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes />
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>naviga_to_bq</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="f1157077-7add-4189-bb16-3a4e76eb0f9e" />
+      <Telemetry>
+        <PreviousWorkflowId value="af48c05b-28d7-4d26-a03b-55c4be2118db" />
+        <OriginWorkflowId value="af48c05b-28d7-4d26-a03b-55c4be2118db" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+      <Event>
+        <Description>After Run Without Errors: Run naviga_data_to_bq.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\naviga__informer_reports_to_rdw\naviga_data_to_bq.bat</cmd_Program>
+        <cmd_CommandLine />
+        <cmd_WorkingDir />
+        <cmd_Timeout value="10000" />
+      </Event>
+      <Event>
+        <Description>After Run: Run main_ad_revenue.bat</Description>
+        <When>After</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src_docker\dbtcdwarehouse\scripts\alteryx\main_ad_revenue.bat</cmd_Program>
+        <cmd_CommandLine />
+        <cmd_WorkingDir />
+        <cmd_Timeout value="300" />
+      </Event>
+      <Event>
+        <Description>After Run With Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>%AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterNoError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>%AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,9 @@
+# version: 2
+
+# models:
+#   - name: sat_question_response
+#     columns:
+#       - name: RESPONSE_RESPONSEID
+#         tests:
+#           - unique
+#           - not_null

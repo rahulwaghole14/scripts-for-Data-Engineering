@@ -1,0 +1,141 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'cdw'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'cdw'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+# vars:
+#   concat_string: '||'
+#   null_placeholder_string: '/'
+
+vars:
+  data_diff:
+    prod_database: hexa-data-report-etl-prod
+    prod_schema: prod
+    prod_custom_schema: prod_<custom_schema>
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+query-comment:
+  job-label: True
+  comment: "dbt-alteryx-server"
+
+# In this example config, we tell dbt to build all models in the example/ directory
+# as tables. These settings can be overridden in the individual model files
+# using the `{{ config(...) }}` macro.
+
+seeds:
+  cdw:
+    +schema: dw_staging_seeds
+    +enabled: true
+models:
+  cdw:
+    # Config indicated by + and applies to all files under models/staging/
+    staging:
+      +materialized: view
+      +schema: dw_staging
+      +grant_access_to:
+        # Production access
+        - project: hexa-data-report-etl-prod
+          dataset: cdw_stage_matrix
+        - project: hexa-data-report-etl-prod
+          dataset: cdw_stage
+        - project: hexa-data-report-etl-prod
+          dataset: "prod_dw_staging"
+        - project: hexa-data-report-etl-prod
+          dataset: "analytics_383411223"
+        - project: hexa-data-report-etl-prod
+          dataset: sentiment_raw
+        # uncomment for dev access
+#         - project: hexa-data-report-etl-dev
+#           dataset: "dev_dw_staging"
+#         - project: hexa-data-report-etl-dev
+#           dataset: "cdw_stage_matrix"
+
+      +persist_docs:
+        relation: true
+        columns: true
+    intermediate:
+      +schema: dw_intermediate
+      +grant_access_to:
+        # Production access
+        - project: hexa-data-report-etl-prod
+          dataset: cdw_stage_matrix
+        - project: hexa-data-report-etl-prod
+          dataset: cdw_stage
+        - project: hexa-data-report-etl-prod
+          dataset: "prod_dw_staging"
+        - project: hexa-data-report-etl-prod
+          dataset: "prod_dw_intermediate"
+        - project: hexa-data-report-etl-prod
+          dataset: "analytics_383411223"
+        - project: hexa-data-report-etl-prod
+          dataset: sentiment_raw
+        # uncomment for dev access
+#         - project: hexa-data-report-etl-dev
+#           dataset: "dev_dw_staging"
+#         - project: hexa-data-report-etl-dev
+#           dataset: "dev_dw_intermediate"
+      +persist_docs:
+        relation: true
+        columns: true
+    marts:
+      mart_sentiment:
+        +materialized: table
+        +schema: dw_mart_sentiment
+      mart_identity:
+        +materialized: table
+        +schema: dw_mart_identity
+      mart_ad_revenue:
+        +materialized: table
+        +schema: dw_mart_ad_revenue
+      mart_ad_revenue_tm1:
+        +materialized: table
+        +schema: dw_mart_ad_revenue_tm1
+      mart_adobe_analytics:
+        +materialized: table
+        +schema: dw_mart_adobe_analytics
+        +post-hook:
+          - "{{incremental_tmp_table_dropper(this)}}"
+        +persist_docs:
+          relation: true
+          columns: true
+      mart_braze:
+        +materialized: table
+        +schema: dw_mart_braze
+        +persist_docs:
+          relation: true
+          columns: true
+      mart_google_analytics:
+        +materialized: table
+        +schema: dw_mart_google_analytics
+    ml:
+      +enabled: true
+      +schema: dw_ml
+      +materialized: model
+
+    elementary:
+      +schema: "elementary"
+
+  # sources:
+  #   - name: reactions
+  #     tables:
+  #       - name: sentiment_reactions

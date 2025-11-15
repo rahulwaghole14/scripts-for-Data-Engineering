@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: idm
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    database: hexa-data-report-etl-prod
+    # uncomment for dev access
+    #database: hexa-data-report-etl-dev
+    schema: cdw_stage
+    tables:
+      - name: account_management__user_profiles
+        loaded_at_field: record_loaded_dts
+
+  - name: braze
+    database: hexa-data-report-etl-prod
+    # uncomment for dev access
+    #database: hexa-data-report-etl-dev
+    schema: prod_dw_mart_braze
+    tables:
+      - name: customer_communication_subscriptions

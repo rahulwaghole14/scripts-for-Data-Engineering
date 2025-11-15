@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+ name: hexa-data-alteryx-worflows
+ namespace: tooling
+spec:
+ schedule: "*/5 * * * *"
+ jobTemplate:
+   spec:
+     template:
+       spec:
+         containers:
+         - name: hexa-data-alteryx-worflows
+           image: 545828170065.dkr.ecr.ap-southeast-2.amazonaws.com/hexanz/hexa-web-and-apps/hexa-data-alteryx-workflows:latest
+           imagePullPolicy: Always
+         restartPolicy: Never   ## OnFailure

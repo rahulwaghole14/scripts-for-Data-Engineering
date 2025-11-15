@@ -1,0 +1,7 @@
+pyarrow>=3.0.0
+google-cloud-bigquery
+google-auth
+toml
+docker
+boto3
+python-dotenv

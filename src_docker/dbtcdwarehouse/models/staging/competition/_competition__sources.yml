@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: competition
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: competition_whats_got_your_goat_Form_Responses_1

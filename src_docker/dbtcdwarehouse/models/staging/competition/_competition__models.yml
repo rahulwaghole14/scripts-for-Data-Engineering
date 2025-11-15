@@ -1,0 +1,6 @@
+version: 2
+
+models:
+- name: stg_competition_whats_got_your_goat
+  columns:
+    - name: email

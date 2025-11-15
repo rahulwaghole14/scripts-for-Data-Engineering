@@ -1,0 +1,324 @@
+version: 2
+
+models:
+
+  - name: sat_adobe_analytics_masthead_replatform
+    description: Satalitle tabel containing Adobe Analytics data for masthead replatform recived hourly from the datafeed.The data is partioned by day and is used to create the mart_adobe_analytics_masthead_replatform
+    columns:
+      - name: ADOBE_KEY
+        description: Unique identifier for the record
+      - name: DATE_TIME
+        description: The time of the hit in readable format, based on the report suite's time zone.
+      - name: BROWSER
+        description: Numeric ID of the browser. References the browser.tsv lookup table.
+      - name: CHANNEL
+        description: Variable used in the Site sections dimension.
+      - name: COUNTRY
+        description: Numeric ID representing values found in the country.tsv lookup.
+      - name: DUPLICATE_PURCHASE
+        description: Flag indicating that the purchase event for this hit is ignored because it is a duplicate.
+      - name: EVENT_LIST
+        description: Comma-separated list of numeric IDs representing events triggered on the hit. Includes both default events and custom events 1-1000. Uses event.tsv lookup.
+      - name: FIRST_HIT_PAGE_URL
+        description:	The very first URL of the visitor.
+      - name: FIRST_HIT_PAGENAME
+        description: Variable used in the Entry page original dimension. The original entry page name of the visitor.
+      - name: FIRST_HIT_REF_DOMAIN
+        description: Variable used in the Original referring domain dimension. Based on first_hit_referrer. The very first referring domain of the visitor.
+      - name: FIRST_HIT_REF_TYPE
+        description: Numeric ID representing the referrer type of the very first referrer of the visitor. Uses referrer_type.tsv lookup.
+      - name: FIRST_HIT_REFERRER
+        description: The very first referring URL of the visitor.
+      - name: FIRST_HIT_TIME_GMT
+        description: Timestamp of the very first hit of the visitor in UNIX® time.
+      - name: GEO_CITY
+        description: 	Name of the city that the hit came from, based on IP. Used in the Cities dimension.
+      - name: GEO_COUNTRY
+        description: Abbreviation of the country that the hit came from, based on IP. Used in the Countries dimension.
+      - name: GEO_REGION
+        description: Name of the state or region that the hit came from, based on IP. Used in the Regions dimension.
+      - name: HITID_HIGH
+        description: Used with hitid_low to identify a hit.
+      - name: HITID_LOW
+        description: Used with hitid_high to identify a hit.
+      - name: LAST_HIT_TIME_GMT
+        description: 	Timestamp (in UNIX® time) of the prior hit. Used to calculate the Days since last visit dimension.
+      - name: MCVISID
+        description: Experience Cloud Visitor ID. 128-bit number consisting of two concatenated 64-bit numbers padded to 19 digits.
+      - name: MOBLIE_ID
+        description: 	If the user is using a mobile device, the numeric ID of the device. The key value for mobile_attributes.tsv Dynamic lookup.
+      - name: MOBILE_APP_STORE_DOWNLOADS
+        description: App store downloads
+      - name: DEVICE_MANUFACTURER
+        description: Manufacturer of the device
+      - name: DEVICE_NAME
+        description: Name of the device
+      - name: MOBILE_DAY_OF_WEEK
+        description: Day of the week
+      - name: MOBILE_DAYS_SINCE_LAST_USE
+        description: Days since last use
+      - name: MOBILEDEVICE
+        description: Mobile device name. On iOS, it is stored as a comma-separated 2-digit string. The first number represents the device generation, and the second number represents the device family.
+      - name: MOBILE_HOUR_OF_DAY
+        description: Hour of the day
+      - name: MOBILE_PLACE_EXIT
+        description: Place exit
+      - name: MONTHLY_VISITOR
+        description: Flag indicating the visitor is unique to the current month.
+      - name: NEW_VISIT
+        description: Flag that determines if the current hit is a new visit. Set by Adobe servers after 30 minutes of visit inactivity.
+      - name: OS
+        description: Numeric ID representing the operating system of the visitor. Based on the user_agent column. The key value for operating_system.tsv standard lookup and operating_system_type.tsv Dynamic lookup.
+      - name: PAGE_URL
+        description: The URL of the hit. Note that post_page_url is stripped for link tracking image requests and uses a data type of varchar(255).
+      - name: PREV_PAGE
+        description: Not used. Adobe-proprietary identifier of the previous page.
+      - name: PAGENAME
+        description: 	Used to populate the Page dimension. If the pagename variable is empty, Analytics uses page_url instead.
+      - name: POST_CUST_HIT_TIME_GMT
+        description: 	Timestamp-enabled report suites only. The timestamp sent with the hit, based in UNIX® time
+      - name: POST_CUST_VISID
+        description: If a custom visitor ID is set, it is populated in this column.
+      - name: POST_EF_ID
+        description: 	The ef_id used in Adobe Advertising integrations.
+      - name: POST_EVAR1
+        description: Post event variable 1
+      - name: POST_EVAR2
+        description: Post event variable 2
+      - name: POST_EVAR3
+        description: Post event variable 3
+      - name: POST_EVAR4
+        description: Post event variable 4
+      - name: POST_EVAR5
+        description: Post event variable 5
+      - name: POST_EVAR6
+        description: Post event variable 6
+      - name: POST_EVAR7
+        description: Post event variable 7
+      - name: POST_EVAR8
+        description: Post event variable 8
+      - name: POST_EVAR9
+        description: Post event variable 9
+      - name: POST_EVAR10
+        description: Post event variable 10
+      - name: POST_EVAR11
+        description: Post event variable 11
+      - name: POST_EVAR12
+        description: Post event variable 12
+      - name: POST_EVAR13
+        description: Post event variable 13
+      - name: POST_EVAR14
+        description: Post event variable 14
+      - name: POST_EVAR15
+        description: Post event variable 15
+      - name: POST_EVAR16
+        description: Post event variable 16
+      - name: POST_EVAR17
+        description: Post event variable 17
+      - name: POST_EVAR18
+        description: Post event variable 18
+      - name: POST_EVAR19
+        description: Post event variable 19
+      - name: POST_EVAR20
+        description: Post event variable 20
+      - name: POST_EVAR21
+        description: Post event variable 21
+      - name: POST_EVAR23
+        description: Post event variable 23
+      - name: POST_EVAR25
+        description: Post event variable 25
+      - name: POST_EVAR28
+        description: Post event variable 28
+      - name: POST_EVAR29
+        description: Post event variable 29
+      - name: POST_EVAR31
+        description: Post event variable 31
+      - name: POST_EVAR73
+        description: Post event variable 73
+      - name: POST_EVAR84
+        description: Post event variable 84
+      - name: POST_EVAR91
+        description: Post event variable 91
+      - name: POST_EVAR95
+        description: Post event variable 95
+      - name: POST_EVAR96
+        description: Post event variable 96
+      - name: POST_EVAR106
+        description: Post event variable 106
+      - name: POST_EVAR143
+        description: Post event variable 143
+      - name: POST_EVAR163
+        description: Post event variable 163
+      - name: POST_EVENT_LIST
+        description: 	Comma-separated list of numeric IDs representing events triggered on the hit. Includes both default events and custom events 1-1000. Uses event.tsv lookup.
+      - name: POST_MOBILE_DAY_OF_WEEK
+        description: Post mobile day of the week
+      - name: POST_MOBILE_DAYS_SINCE_LAST_USE
+        description: Post mobile days since last use
+      - name: POST_MOBILEDEVICE
+        description: Mobile device name. On iOS, it is stored as a comma-separated 2-digit string. The first number represents the device generation, and the second number represents the device family
+      - name: POST_MOBILE_HOUR_OF_DAY
+        description: Post mobile hour of the day
+      - name: POST_PAGE_EVENT
+        description: 	The type of hit that is sent in the image request (standard hit, download link, custom link, exit link). See Page event lookup.
+      - name: POST_PAGE_URL
+        description: The URL of the hit. Note that post_page_url is stripped for link tracking image requests and uses a data type of varchar(255).
+      - name: POST_PAGENAME
+        description: Used to populate the Page dimension. If the pagename variable is empty, Analytics uses page_url instead.
+      - name: POST_PAGENAME_NO_URL
+        description: Post Similar to pagename, except it does not fall back to page_url. Only the post column is available.
+      - name: POST_PRODUCT_LIST
+        description: Product list as passed in through the products variable. Products are delimited by commas while individual product properties are delimited by semicolons.
+      - name: POST_PROP1
+        description: Post property 1
+      - name: POST_PROP2
+        description: Post property 2
+      - name: POST_PROP3
+        description: Post property 3
+      - name: POST_PROP4
+        description: Post property 4
+      - name: POST_PROP5
+        description: Post property 5
+      - name: POST_PROP8
+        description: Post property 8
+      - name: POST_PROP9
+        description: Post property 9
+      - name: POST_PROP10
+        description: Post property 10
+      - name: POST_PROP11
+        description: Post property 11
+      - name: POST_PROP14
+        description: Post property 14
+      - name: POST_PROP22
+        description: Post property 22
+      - name: POST_PROP25
+        description: Post property 25
+      - name: POST_PROP28
+        description: Post property 28
+      - name: POST_PROP31
+        description: Post property 31
+      - name: POST_PROP35
+        description: Post property 35
+      - name: POST_PROP39
+        description: Post property 39
+      - name: POST_PROP47
+        description: Post property 47
+      - name: POST_PROP54
+        description: Post property 54
+      - name: POST_PROP55
+        description: Post property 55
+      - name: POST_PROP56
+        description: Post property 56
+      - name: POST_PROP61
+        description: Post property 61
+      - name: POST_PROP64
+        description: Post property 64
+      - name: POST_USER_SERVER
+        description: Used in the Server dimension.
+      - name: POST_VISID_HIGH
+        description: 	Used with visid_low to uniquely identify a visitor.
+      - name: POST_VISID_LOW
+        description: Used with visid_high to uniquely identify a visitor.
+      - name: POST_VISID_TYPE
+        description: Not for external use; internally used by Adobe for processing optimizations. Numeric ID representing the method used to identify the visitor.
+                     Custom visitor ID or Unknown/not applicable
+                     1. IP and user agent fallback
+                     2. HTTP Mobile Subscriber Header
+                     3. Legacy cookie value (s_vi)
+                     4. Fallback cookie value (s_fid)
+                     5. Identity Service
+      - name: PROP1
+        description: Property 1
+      - name: PROP2
+        description: Property 2
+      - name: PROP3
+        description: Property 3
+      - name: PROP4
+        description: Property 4
+      - name: PROP11
+        description: Property 11
+      - name: PROP14
+        description: Property 14
+      - name: PROP25
+        description: Property 25
+      - name: PROP28
+        description: Property 28
+      - name: PROP31
+        description: Property 31
+      - name: PROP47
+        description: Property 47
+      - name: PROP54
+        description: Property 54
+      - name: PROP56
+        description: Property 56
+      - name: PROP61
+        description: Property 61
+      - name: PROP64
+        description: Property 64
+      - name: PURCHASE_ID
+        description: Purchase id
+      - name: QUARTERLY_VISITOR
+        description: Flag to determine if the hit is a new quarterly visitor.
+      - name: REF_DOMAIN
+        description: Based on the referrer column. The referring domain of the hit. Used in the Referring domain dimension.
+      - name: REF_TYPE
+        description: A numeric ID representing the type of referral for the hit. Used in the Referrer type dimension.
+                     1. Inside your site
+                     2. Other web sites
+                     3. Search engines
+                     4. Hard drive
+                     5. USENET
+                     6. Typed/Bookmarked (no referrer)
+                     7. Email
+                     8. No JavaScript
+                     9. Social Networks
+      - name: REFERRER
+        description: Page URL of the previous page. Used in the Referrer dimension. Note that while referrer uses a data type of varchar(255), post_referrer uses a data type of varchar(244).
+      - name: STATS_SERVER
+        description: Not of use. Adobe internal server that processed the hit.
+      - name: VISID_HIGH
+        description: 	Used with visid_low to uniquely identify a visitor.
+      - name: VISID_LOW
+        description: Used with visid_high to uniquely identify a visitor.
+      - name: VISID_NEW
+        description: Flag to identify if the hit contains a newly generated visitor ID.
+      - name: VISID_TIMESTAMP
+        description: If visitor ID was newly generated, provides the timestamp (in UNIX® time) of when the visitor ID was generated.
+      - name: VISID_TYPE
+        description: 	Not for external use; internally used by Adobe for processing optimizations. Numeric ID representing the method used to identify the visitor.
+                      0. Custom visitor ID or Unknown/not applicable
+                      1. IP and user agent fallback
+                      2. HTTP Mobile Subscriber Header
+                      3. Legacy cookie value (s_vi)
+                      4. Fallback cookie value (s_fid)
+                      5. Identity Service
+      - name: VISIT_KEYWORDS
+        description: 	Variable used in the Search keyword dimension. This column uses a non-standard character limit of varchar(244) to accommodate back-end logic used by Adobe.
+      - name: VISIT_NUM
+        description: Variable used in the Visit number dimension. Starts at 1, and increments each time a new visit starts per visitor.visit_page_num
+      - name: VISIT_PAGE_NUM
+        description: 	Variable used in the Hit depth dimension. Increases by 1 for each hit the user generates. Resets each visit.
+      - name: VISIT_REF_DOMAIN
+        description: 	Based on the visit_referrer column. The first referring domain of the visit.
+      - name: VISIT_REF_TYPE
+        description: Numeric ID representing the referrer type of the first referrer of the visit. Uses the referrer_type.tsv lookup table.
+      - name: VISIT_REFERRER
+        description: The first referrer of the visit.
+      - name: VISIT_SEARCH_ENGINE
+        description: Numeric ID of the first search engine of the visit. Uses search_engines.tsv lookup.
+      - name: VISIT_START_PAGE_URL
+        description: The first URL of the visit.
+      - name: VISIT_START_PAGENAME
+        description: 	The Page Name value in the first hit of the visit.
+      - name: VISIT_START_TIME_GMT
+        description: Timestamp (in UNIX® time) of the first hit of the visit.
+      - name: WEEKLY_VISITOR
+        description: 	Flag to determine if the hit is a new weekly visitor.
+      - name: YEARLY_VISITOR
+        description: Flag to determine if the hit is a new yearly visitor.
+      - name: ZIP_CODE
+        description: Helps populate the Zip code dimension. See also geo_zip.
+      - name: TABLE_SUFFIX_VALUE
+        description: Timw when the table was loaded in  yyyymmddhhmmss format
+      - name: TABLE_SUFFIX_TIME
+        description: Time when the table was loaded in  NZT

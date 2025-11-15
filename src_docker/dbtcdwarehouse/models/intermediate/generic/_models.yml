@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_matrix__customers
+    columns:
+      - name: PersContact3
+  - name: int_account_management__user_profiles
+    columns:
+      - name: email
+  - name: int_competition__user_profiles
+    columns:
+      - name: email
+  - name: int_matrix__subscriptions
+    columns:
+      - name: EMAIL
+  - name: int_piano__webhook_events
+    columns:
+      - name: USER_EMAIL
+  - name: int_presspatron__bq_to_braze_user_profile
+    columns:
+      - name: email
+  - name: int_presspatron__cancellation
+    columns:
+      - name: email
+  - name: int_presspatron__donations
+    columns:
+      - name: email_address
+  - name: int_presspatron__newsletter
+    columns:
+      - name: email

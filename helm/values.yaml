@@ -1,0 +1,33 @@
+image:
+  repository: "545828170065.dkr.ecr.ap-southeast-2.amazonaws.com/hexanz/hexa-web-and-apps/hexa-data-alteryx-workflows"
+  pullPolicy: Always
+  tag: ""
+
+resources:
+  limits:
+    #cpu: 50m
+    #memory: 512Mi
+    cpu: "2000m"
+    memory: "8192Mi"
+  requests:
+    cpu: "500m"
+    memory: "1000Mi"
+
+cronjob:
+  #suspend: true
+  schedule: "0 17 * * *"
+  # Schedule explained:
+  # 0 - minute (0)
+  # 17 - hour (5 PM UTC, which is 5 AM NZ Time)
+  # * - every day of the month
+  # * - every month
+  # * - every day of the week
+  concurrencyPolicy: Forbid  # Ensures only one job runs at a time
+  restartPolicy: Never
+
+serviceAccount:
+  create: false
+
+awssecretsmanager:
+  enabled: false
+  region: ap-southeast-2

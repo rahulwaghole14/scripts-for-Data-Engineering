@@ -1,0 +1,59 @@
+version: 2
+
+models:
+
+  - name: fact_hit_events
+    description: adobe event records
+    columns:
+      - name: FACT_ID
+        description: Primary key of fact
+      - name: GEO_ID
+        description: foreign key of dim_hit_geolocations
+      - name: FIRST_HIT_ID
+        description: foreign key of dim_visitor_first_hits
+      - name: HIT_HITS_ID
+        description: foreign key of dim_hit_hits
+      - name: REF_ID
+        description: foreign key of dim_hit_referrers
+      - name: VIST_VISITS_ID
+        description: foreign key of dim_visit_visits
+      - name: HIT_SITE_ID
+        description: foreign key of dim_hit_sites
+      - name: HIT_PLATFORMS_ID
+        description: foreign key of dim_hit_platforms
+      - name: HIT_ARTICLES_ID
+        description: foreign key of dim_hit_articles
+      - name: HIT_LINKS_ID
+        description: foreign key of dim_hit_links
+      - name: VISITOR_VISITORS_ID
+        description: foreign key of dim_visitor_visitors
+      - name: VISITOR_USERS_ID
+        description: foreign key of dim_visitor_users
+      - name: VISIT_ID
+        description: foreign key of dim_visit_cd
+      - name: VISITOR_ID
+        description: foreign key of dim_visitor_cd
+      - name: HIT_SERVERS_ID
+        description: foreign key of dim_hit_servers
+      - name: IS_LINK_TRACKING
+        description: if the record is related to link records i.e. event, not pageview
+      - name: LOAD_DATE
+        description: date of when the record occured (used for incremental update insert+overwrite strategy)
+  - name: fact_digi_audience_component
+    description: digital audience component
+    columns:
+      - name: ARTICLE_CLICK,
+        description: Number of clicks on the article
+      - name: COMPONENT_LOCATION
+        description: Location of the component on the page
+  - name: fact_americas_cup_aa_metrics
+    description: digital audience component
+    columns:
+      - name: DAY
+        description: DATE of the record in yyyy-mm-dd format
+      - name: PAGE_VIEWS
+        description: Numner of page views
+      - name: UNIQUE_VISITORS
+        description: Number of unique visitors
+      - name: USER_STATUS
+        description: User status

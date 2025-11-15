@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: showcaseturbo
+    database: hexa-data-report-etl-prod
+    schema: adw_stage
+    tables:
+      - name: showcaseturbo__adrevenue
+        columns:
+          - name: our_ref
+            description: primary key of showcaseturbo__adrevenue
+            tests:
+              - unique
+              - not_null
+      - name: dynamic_showcase_plus_tables
+        description: Tables matching '%res_comm%' pattern are handled dynamically via a custom macro. Actual table names are resolved at runtime and not listed explicitly here.\
+
+      - name: 2024_res_comm_*
+        freshness:
+          warn_after: {count: 32, period: day}
+          error_after: {count: 40, period: day}
+        loaded_at_field: RECORD_LOAD_DTS

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: hexa_google_analytics
+    database: hexa-data-report-etl-prod
+    schema: analytics_383411223
+    tables:
+      - name: events_*
+      - name: events_fresh_*
+      - name: events_intraday_*
+      - name: pseudonymous_users_*
+  - name: hexa_google_analytics_dev
+    database: hexa-data-report-etl-dev
+    schema: analytics_456451453
+    tables:
+      - name: events_*
+      - name: events_fresh_*
+      - name: events_intraday_*
+      - name: pseudonymous_users_*

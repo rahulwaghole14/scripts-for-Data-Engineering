@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes />
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>piano__subscription_to_cdw</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="499fe44d-3197-4cbb-84f4-ffe39cd20765" />
+      <Telemetry>
+        <PreviousWorkflowId value="50da718f-75d2-497d-a8fb-bcadf5772654" />
+        <OriginWorkflowId value="684a29b7-5e72-412b-bfae-3ef7079cf65a" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+      <Event>
+        <Description>After Run Without Errors: Run main.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\piano\piano__subscription_to_cdw\main.bat</cmd_Program>
+        <cmd_CommandLine />
+        <cmd_WorkingDir />
+        <cmd_Timeout value="3600" />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Run load_vault.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\piano__subscription_to_cdw\load_vault.bat</cmd_Program>
+        <cmd_CommandLine>stage piano load_vault</cmd_CommandLine>
+        <cmd_WorkingDir />
+        <cmd_Timeout value="1800" />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Run load_vault.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\piano__subscription_to_cdw\load_vault.bat</cmd_Program>
+        <cmd_CommandLine>vault load_mart print_digi_comparison</cmd_CommandLine>
+        <cmd_WorkingDir />
+        <cmd_Timeout value="1800" />
+      </Event>
+      <Event>
+        <Description>After Run With Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>ERROR %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterNoError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>Success %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+    </Events>
+  </Properties>
+</AlteryxDocument>

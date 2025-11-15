@@ -1,0 +1,154 @@
+{{
+  config(
+        tags=['adw']
+    )
+}}
+
+WITH category_backfill AS (
+
+    SELECT
+        CAST(AD_ADVERTISER_LEGACY AS STRING) AS AD_ADVERTISER_LEGACY
+        , AD_PIB_CATEGORY_DESC
+    FROM {{ ref('sat_ad_revenue_naviga') }}
+    WHERE CAST(AD_FILEUPDATEDATETIME AS DATE) = CURRENT_DATE - INTERVAL '1' DAY
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY CAST(AD_ADVERTISER_LEGACY AS STRING)) = 1
+)
+
+, satdata AS (
+
+    SELECT
+
+        AD_REPORT_KEY
+        , AD_REPORT_HASH
+        , RECORD_SOURCE
+        , CAST(AD_CAMPAIGN_ID AS STRING) AS CAMPAIGN_ID
+        , CAST(AD_LINE_ID AS STRING) AS LINE_ID
+        , CAST(AD_MONTH_UNIQUE_ID AS STRING) AS MONTH_UNIQUE_ID
+        , CASE
+            WHEN AD_PRINT_PUB_IND = TRUE THEN COALESCE(CAST(AD_ISSUE_DATE AS DATE), AD_DATE_ENTERED)
+            ELSE AD_MONTH_START_DATE
+        END AS DATE
+        , CAST(AD_DATE_ENTERED AS DATE) AS DATE_ENTERED
+        , CASE
+            WHEN AD_PRINT_PUB_IND IS TRUE THEN 'Print'
+            WHEN AD_PRINT_PUB_IND IS FALSE THEN 'Digital'
+            ELSE '(not set)'
+        END AS ORIGIN
+        , 'Adbook' AS SOURCE
+        , CASE WHEN AD_CURRENT_REP_NAME IN (
+            'Cameron Beattie'
+            , 'Chantelle Sadowski RE'
+            , 'Karen Baker'
+            , 'Niko Perez'
+            , 'Bronwyn Hawkins'
+        ) THEN 'Real Estate - North'
+        WHEN AD_CURRENT_REP_NAME = 'Andrew McFarlane' THEN 'Agency & Trading'
+        WHEN AD_CURRENT_REP_NAME = 'Jeremy Hobbs' THEN 'Contact Centre - Outbound'
+        WHEN AD_CURRENT_REP_NAME = 'Alicia Peebles DT' THEN 'Southern Sales - Christchurch'
+        {# comment out below as it is already like below in the source data, and also some of them are not the same as in naviga #}
+        {# WHEN AD_CURRENT_REP_NAME IN ('Kylie Mccallum', 'Chantelle Sadowski DT') THEN 'North Sales - Taranaki'
+        WHEN CAST(AD_CURRENT_REP_ID AS STRING) = '6716' THEN 'North Sales - Taranaki'
+        WHEN AD_CURRENT_REP_NAME = 'Melanie Hughes' THEN 'Metro Sales - Wellington'
+        WHEN AD_CURRENT_REP_NAME = 'Pippa Baalham' THEN 'Auckland Metro Sales - Team 1'
+        WHEN AD_CURRENT_REP_NAME = 'Kelsi Hamilton' THEN 'Agency Group' #}
+        ELSE AD_PRIMARY_REP_GROUP END AS PRIMARY_REP_GROUP
+        , 'AdBook' AS SOURCE_OR_GL
+        , CAST(AD_AGENCY_LEGACY AS STRING) AS AGENCY_LEGACY
+        , CAST(AD_ADVERTISER_ID AS STRING) AS ADVERTISER_ID
+        , CAST(s.AD_ADVERTISER_LEGACY AS STRING) AS ADVERTISER_LEGACY
+
+        , CASE
+            WHEN s.AD_ADVERTISER_LEGACY IS null THEN CAST(AD_ADVERTISER_ID AS STRING)
+            {# when AD_ADVERTISER_LEGACY = '' then AD_ADVERTISER_ID #}
+            ELSE CAST(s.AD_ADVERTISER_LEGACY AS STRING)
+        END AS CUSTOMERNUMBER
+
+        , AD_ADVERTISER_NAME AS ADVERTISER_NAME
+        {# , AD_ADVERTISER_NAME AS CUSTOMERNAME #}
+        , COALESCE(c.AD_PIB_CATEGORY_DESC, 'Other Services') AS PIB_CATEGORY_DESC
+        , AD_AGENCY_NAME AS AGENCY_NAME
+        , AD_PRODUCT_NAME AS PRODUCT_NAME
+        , CAST(AD_PRODUCT_ID AS STRING) AS PRODUCT_ID
+        , AD_SIZE_DESC AS SIZE_DESC
+        {# , AD_SIZE_DESC AS SIZE #}
+        , AD_AD_TYPE_ID AS AD_TYPE_ID
+        , AD_GROSS_LINE_LOCAL_AMOUNT AS GROSS_LINE_LOCAL_AMOUNT
+        , AD_NET_LINE_LOCAL_AMOUNT AS REVENUE
+        , CAST(AD_FILEUPDATEDATETIME AS STRING) AS FILEUPDATEDATETIME
+        , AD_GL_TYPE_ID AS GL_TYPE_ID
+        , AD_GL_TYPES_DESCRIPTION AS GL_TYPES_DESCRIPTION
+        {# , AD_GL_TYPES_DESCRIPTION as TYPE #}
+        , CASE
+            WHEN AD_CLIENT_TYPE_ID = 'HOUSE' THEN 'House Ads'
+            WHEN AD_ADVERTISER_NAME LIKE 'CONTRA%' THEN 'Contra'
+            WHEN AD_ADVERTISER_NAME LIKE 'Marketing' THEN 'House Ads'
+            ELSE 'Paid Advertising (excl House and Contra)'
+        END AS PAID_ADVERTISING
+
+        , CASE
+            WHEN AD_CURRENT_REP_NAME = 'Kelly Sharland-Wiley' THEN 'Kelly Wiley-Sharland'
+            WHEN AD_CURRENT_REP_NAME = 'Vacant TDN' THEN 'Chantelle Sadowski DT'
+            ELSE AD_CURRENT_REP_NAME
+        END AS CURRENT_REP_NAME
+
+        , CASE
+            WHEN AD_PRODUCT_NAME = 'hexa.co.nz' THEN 'hexa'
+            WHEN AD_PRODUCT_NAME = 'Audio Media' THEN 'Audio'
+            WHEN AD_PRODUCT_NAME = 'Neighbourly' THEN 'Neighbourly'
+            WHEN AD_PRODUCT_NAME = 'OTHER' THEN 'Other' ELSE 'Print'
+        END AS PLATFORM
+
+        , CASE
+            WHEN AD_GL_TYPE_ID = 'AUD' THEN 'Audio'
+            WHEN AD_GL_TYPE_ID = 'INS' THEN 'Insert'
+            WHEN AD_GL_TYPE_ID = 'DIGI' THEN 'Digital Ads'
+            WHEN AD_GL_TYPE_ID = 'CLAS' THEN 'Classifieds'
+            WHEN AD_GL_TYPE_ID = 'NBLY' THEN 'Neighbourly'
+            WHEN AD_GL_TYPE_ID = 'PRCH' THEN 'Production Charge'
+            WHEN AD_GL_TYPE_ID = 'Pre Roll' THEN 'Video'
+            WHEN AD_GL_TYPE_ID = 'Video' THEN 'Video'
+            WHEN AD_GL_TYPE_ID = 'CONT'
+                THEN
+                    CASE WHEN AD_PRINT_PUB_IND IS TRUE THEN 'Content Marketing Print' ELSE 'Content Marketing Digital' END
+            WHEN AD_GL_TYPE_ID = 'SPCN'
+                THEN
+                    CASE WHEN AD_PRINT_PUB_IND IS TRUE THEN 'Sponsored Content' ELSE 'Content Marketing Digital' END
+            ELSE AD_GL_TYPES_DESCRIPTION
+        END AS PRODUCT_TYPE
+
+        , CAST(AD_PRIMARY_GROUP_ID AS STRING) AS PRIMARY_GROUP_ID
+        , CAST(AD_CLIENT_TYPE_ID AS STRING) AS CLIENT_TYPE_ID
+        , CAST(AD_CAMPAIGN_TYPE AS STRING) AS CAMPAIGN_TYPE
+        , CAST(AD_CAMPAIGN_STATUS_CODE AS STRING) AS CAMPAIGN_STATUS_CODE
+        , CAST(AD_LINE_CANCEL_STATUS_ID AS STRING) AS LINE_CANCEL_STATUS_ID
+        , CAST(AD_CURRENCY_EXCHANGE_RATE AS STRING) AS CURRENCY_EXCHANGE_RATE
+        , CAST(AD_CURRENCY_CODE AS STRING) AS CURRENCY_CODE
+        , AD_AGENCY_COMMISSION_PERCENT AS AGENCY_COMMISSION_PERCENT
+        , CAST(AD_NO_AGY_COMM_IND AS STRING) AS NO_AGY_COMM_IND
+        , AD_ACTUAL_LINE_LOCAL_AMOUNT AS ACTUAL_LINE_LOCAL_AMOUNT
+        , AD_EST_LINE_LOCAL_AMOUNT AS EST_LINE_LOCAL_AMOUNT
+        , AD_GROSS_LINE_FOREIGN_AMOUNT AS GROSS_LINE_FOREIGN_AMOUNT
+        , AD_NET_LINE_FOREIGN_AMOUNT AS NET_LINE_FOREIGN_AMOUNT
+        , CAST(AD_CURRENT_REP_ID AS STRING) AS CURRENT_REP_ID
+        , CAST(AD_CURRENT_REP_PCT AS STRING) AS CURRENT_REP_PCT
+        , CAST(AD_NET_REP_AMOUNT AS STRING) AS NET_REP_AMOUNT
+        , CAST(AD_MONTH_ACTUAL_AMT AS STRING) AS MONTH_ACTUAL_AMT
+        , CAST(AD_MONTH_EST_AMT AS STRING) AS MONTH_EST_AMT
+        , CAST(AD_PRODUCT_GROUPING AS STRING) AS PRODUCT_GROUPING
+        , CAST(AD_PRIMARY_REP_GROUP_ID AS STRING) AS PRIMARY_REP_GROUP_ID
+        , CAST(AD_AGENCY_ID AS STRING) AS AGENCY_ID
+        , CAST(AD_AD_INTERNET_CAMPAIGNS_BRAND_ID AS STRING) AS AD_INTERNET_CAMPAIGNS_BRAND_ID
+        , CAST(AD_BRAND_PIB_CODE AS STRING) AS BRAND_PIB_CODE
+        , CAST(AD_AD_INTERNET_SECTIONS_SECTION_DESCRIPTION AS STRING) AS SECTION
+        , CAST(NULL AS STRING) AS EST_QTY
+        , CAST(NULL AS STRING) AS MONTH_ACTUAL_IMPS
+    {# , AD_AD_INTERNET_SECTIONS_SECTION_DESCRIPTION AS PUBLISHEDCLASSIFICATION #}
+
+    FROM {{ ref('sat_ad_revenue_adbook') }} s
+    LEFT JOIN category_backfill c ON (CAST(s.AD_ADVERTISER_LEGACY AS STRING) = CAST(c.AD_ADVERTISER_LEGACY AS STRING))
+    WHERE AD_MONTH_START_DATE < '2023-07-01'
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY AD_REPORT_HASH ORDER BY EFFECTIVE_FROM DESC) = 1
+
+)
+
+SELECT * FROM satdata

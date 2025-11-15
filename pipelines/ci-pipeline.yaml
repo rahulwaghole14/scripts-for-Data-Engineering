@@ -1,0 +1,57 @@
+name: hexa-data-alteryx-workflows-ci
+parameters:
+  - name: dockerSubdirectory
+    displayName: 'Docker Subdirectory Name'
+    type: string
+    default: 'docker-eks-test'
+    values:
+    - docker-eks-test
+    - brightcove-workflow
+    - naviga-workflow
+    - idm-bigquery
+    - adobe-workflow
+    - matrix-workflow
+    - piano-workflow
+    - sentiment-workflow
+    - source-freshness
+    - presspatron-workflow
+    - replatform-workflow
+    - matrix-dbt
+    - showcase-workflow
+    - megaphone-workflow
+    - neighbourly-workflow
+    - brightcove
+    - gam-dbt
+    - hexaevent
+    - admanager-workflow
+    - smi-workflow
+    - bonzai-workflow
+    - infosum-workflow
+    - ga-workflow
+
+trigger: none
+
+pr:
+  branches:
+    include:
+      - '*'
+  paths:
+    exclude:
+      - '*'
+
+pool:
+  vmImage: ubuntu-latest
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: hexaNZ/hexa-azure-pipeline-templates
+      endpoint: hexaNZ
+      ref: refs/tags/9.3
+extends:
+  template: workflows/ci/cron/cron-image-ci.yaml@templates
+  parameters:
+    imageName: hexanz/hexa-web-and-apps/hexa-data-alteryx-workflows
+    imageFilePath: "src_docker/${{ parameters.dockerSubdirectory }}.dockerfile"
+    autoSemVerAndTag: true
+    imageTag: "${{ parameters.dockerSubdirectory }}-latest"

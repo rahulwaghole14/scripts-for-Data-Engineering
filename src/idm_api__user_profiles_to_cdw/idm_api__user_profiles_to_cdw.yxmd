@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.1">
+  <Nodes />
+  <Connections />
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>idm_api__user_profiles_to_cdw</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b7f547aa-da95-41b4-b965-3e946341ee02" />
+      <Telemetry>
+        <PreviousWorkflowId value="c77cb97a-ecb1-4728-b87c-a57c9375c9d4" />
+        <OriginWorkflowId value="5af5e19a-477f-4525-afdf-618012a5b94e" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+      <Event>
+        <Description>After Run Without Errors: Run main.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\idm_api__user_profiles_to_cdw\main.bat</cmd_Program>
+        <cmd_CommandLine />
+        <cmd_WorkingDir />
+        <cmd_Timeout value="1000" />
+      </Event>
+      <Event>
+        <Description>Disabled: Run load_vault.bat</Description>
+        <When>Disabled</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\idm_api__user_profiles_to_cdw\load_vault.bat</cmd_Program>
+        <cmd_CommandLine>stage idm load_vault</cmd_CommandLine>
+        <cmd_WorkingDir />
+        <cmd_Timeout value="300" />
+      </Event>
+      <Event>
+        <Description>Disabled: Run load_vault.bat</Description>
+        <When>Disabled</When>
+        <SendMail value="False" />
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\idm_api__user_profiles_to_cdw\load_vault.bat</cmd_Program>
+        <cmd_CommandLine>stage idm load_braze_subs</cmd_CommandLine>
+        <cmd_WorkingDir />
+        <cmd_Timeout value="300" />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Run main.bat</Description>
+        <When>AfterNoError</When>
+        <SendMail value="False" />
+        <cmd_Program>C:\projects\hexa-data-alteryx-workflows\src\cdw_to_bigquery__idm\main.bat</cmd_Program>
+        <cmd_CommandLine />
+        <cmd_WorkingDir />
+        <cmd_Timeout value="1500" />
+      </Event>
+      <Event>
+        <Description>After Run Without Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterNoError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>Success %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+      <Event>
+        <Description>After Run With Errors: Email to datateam@hexa.co.nz</Description>
+        <When>AfterError</When>
+        <SendMail value="True" />
+        <email_SMTPServer>smtp-relay.gmail.com</email_SMTPServer>
+        <email_Encryption>None</email_Encryption>
+        <email_Port>25</email_Port>
+        <email_Authentication value="False" />
+        <email_Username />
+        <email_Password />
+        <email_From>datateam@hexa.co.nz</email_From>
+        <email_To>datateam@hexa.co.nz</email_To>
+        <email_Subject>Error %AppName%: %Module% - %NumErrors% Errors</email_Subject>
+        <email_Body><![CDATA[User: %User%
+ComputerName: %ComputerName%
+WorkingDir: %WorkingDir%
+Errors: %NumErrors%
+ConversionErrors: %NumConvErrors%
+Warnings: %Warnings%
+
+%OutputLog%
+]]></email_Body>
+        <email_Attachments />
+      </Event>
+    </Events>
+  </Properties>
+</AlteryxDocument>

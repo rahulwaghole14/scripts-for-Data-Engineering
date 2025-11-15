@@ -1,0 +1,6 @@
+version: 2
+
+models:
+- name: stg_matrix__bq_persons
+  columns:
+    - name: PersContact3

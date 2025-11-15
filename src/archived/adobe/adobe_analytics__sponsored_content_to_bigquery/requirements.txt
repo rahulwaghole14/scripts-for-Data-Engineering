@@ -1,0 +1,11 @@
+cryptography
+pandas
+numpy
+requests
+pytest
+dateparser
+grpcio
+google-cloud-bigquery
+google-cloud-bigquery-storage
+google-auth-oauthlib
+urllib3

@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: bq_matrix
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    database: hexa-data-report-etl-prod
+
+    # uncomment for dev access
+#    database: hexa-data-report-etl-dev
+
+    schema: cdw_stage_matrix
+    tables:
+      - name: subscription
+        loaded_at_field: update_time
+      - name: subscriber
+        loaded_at_field: update_time
+      - name: tbl_period
+        loaded_at_field: update_time
+      - name: tbl_product
+        loaded_at_field: update_time
+      - name: cancellation_reason
+      - name: subord_cancel
+      - name: tbl_service
+        loaded_at_field: update_time
+      - name: tbl_person
+        loaded_at_field: update_time
+      - name: tbl_country
+      - name: tbl_location
+      - name: tbl_ContactNumber
+      - name: TBL_LINKType
+      - name: rate_header
+      - name: tbl_RateStructure
+      - name: tbl_RateStructureItem
+      - name: tbl_RateItem
+      - name: tbl_ObjectLink
+      # - name: ffx_tbl_RPT_TM1retail
+      - name: complaints
+      - name: ffx_vw_RPT_SubsRateRounds
+      - name: ffx_temp_winback_subscribers1

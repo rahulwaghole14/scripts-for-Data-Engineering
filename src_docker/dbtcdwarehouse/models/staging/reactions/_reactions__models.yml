@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: reactions
+    database: hexa-data-report-etl-prod
+    schema: sentiment_raw
+    tables:
+      - name: reactions_data_*
+        description: responses from new api integration

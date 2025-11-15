@@ -1,0 +1,11 @@
+boto3
+google-api-core
+google-auth
+google-auth-oauthlib
+google-cloud-bigquery
+google-cloud-bigquery-storage
+google-cloud-core
+pydantic
+pytest
+pytest-cov
+python-dotenv

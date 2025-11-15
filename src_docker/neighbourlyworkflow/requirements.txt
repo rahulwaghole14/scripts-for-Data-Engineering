@@ -1,0 +1,8 @@
+pymysql
+pandas
+google-cloud-bigquery
+python-dotenv
+sshtunnel
+paramiko
+pydantic
+boto3

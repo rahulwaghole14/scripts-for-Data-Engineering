@@ -1,0 +1,62 @@
+version: 2
+
+sources:
+  - name: googleadmanager
+    database: hexa-data-report-etl-prod
+    schema: gam_dw_prod
+    tables:
+      - name: Line_Item_ID_Current
+      - name: Line_Item_ID_Used
+      - name: adwallet_data
+      - name: default_table
+      - name: fill_rate
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: pca_gen
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: pca_hour
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: pca_view
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: pca_view_video
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      # - name: pca_view_update
+      - name: pca_view_video_adwallet
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: gam_sponcon
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: vv_gen
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      - name: vv_sellthrough
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}
+        loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)
+      # - name: video_viewership
+      #   freshness:
+      #     warn_after: {count: 24, period: hour}
+      #     error_after: {count: 24, period: hour}
+      #   loaded_at_field: SAFE_CAST(DATE AS TIMESTAMP)

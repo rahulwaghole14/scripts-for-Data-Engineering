@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: drupal_dpa
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    database: hexa-data-report-etl-prod
+    schema: cdw_stage
+    tables:
+      - name: drupal__articles
+        columns:
+          - name: id
+            tests:
+              - unique
+              - not_null
+        loaded_at_field: "SAFE_CAST(updatedDate AS TIMESTAMP)"

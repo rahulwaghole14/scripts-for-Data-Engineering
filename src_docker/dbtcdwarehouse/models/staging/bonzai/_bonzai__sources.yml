@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bonzai
+    database: hexa-data-report-etl-prod
+    schema: bonzai
+    tables:
+      - name: data_*

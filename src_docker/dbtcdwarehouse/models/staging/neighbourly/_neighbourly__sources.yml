@@ -1,0 +1,49 @@
+# version: 2
+
+# sources:
+  # - name: neighbourly
+  #   database: stage
+  #   schema: neighbourly
+  #   tables:
+  #     # - name: notification_preference
+  #     #   columns:
+  #     #     - name: hash_key
+  #     #       tests:
+  #     #         - unique
+  #     #         - not_null
+  #     - name: user_deactivated
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null
+  #     - name: paf_address
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null
+  #     - name: user_paf_address
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null
+  #     - name: user
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null
+  #     - name: neighbourlyUsrCount
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null
+  #     - name: neighbourhood
+  #       columns:
+  #         - name: hash_key
+  #           # tests:
+  #           #   - unique
+  #           #   - not_null

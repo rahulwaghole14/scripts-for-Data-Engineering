@@ -1,0 +1,53 @@
+with source as (
+      select * from {{ source('googleadmanager', 'pca_view_video_adwallet') }}
+),
+renamed as (
+    select
+        {{ adapter.quote("DATE") }},
+        {{ adapter.quote("ADVERTISER_NAME") }},
+        {{ adapter.quote("ORDER_NAME") }},
+        {{ adapter.quote("LINE_ITEM_NAME") }},
+        {{ adapter.quote("DEVICE_CATEGORY_NAME") }},
+        {{ adapter.quote("CREATIVE_NAME") }},
+        {{ adapter.quote("ADVERTISER_ID") }},
+        {{ adapter.quote("ORDER_ID") }},
+        {{ adapter.quote("LINE_ITEM_ID") }},
+        {{ adapter.quote("DEVICE_CATEGORY_ID") }},
+        {{ adapter.quote("CREATIVE_ID") }},
+        {{ adapter.quote("AD_TYPE_NAME") }},
+        {{ adapter.quote("VIDEO_AD_TYPE_NAME") }},
+        {{ adapter.quote("AD_TYPE_ID") }},
+        {{ adapter.quote("VIDEO_AD_TYPE_ID") }},
+        {{ adapter.quote("SALESPERSON_ID") }},
+        {{ adapter.quote("SALESPERSON_NAME") }},
+        {{ adapter.quote("LINE_ITEM_END_DATE_TIME") }},
+        {{ adapter.quote("LINE_ITEM_START_DATE_TIME") }},
+        {{ adapter.quote("ORDER_START_DATE_TIME") }},
+        {{ adapter.quote("ORDER_END_DATE_TIME") }},
+        {{ adapter.quote("TOTAL_LINE_ITEM_LEVEL_IMPRESSIONS") }},
+        {{ adapter.quote("TOTAL_ACTIVE_VIEW_VIEWABLE_IMPRESSIONS") }},
+        {{ adapter.quote("TOTAL_ACTIVE_VIEW_VIEWABLE_IMPRESSIONS_RATE") }},
+        {{ adapter.quote("TOTAL_LINE_ITEM_LEVEL_CLICKS") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_START") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_FIRST_QUARTILE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_MIDPOINT") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_THIRD_QUARTILE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_COMPLETE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_AVERAGE_VIEW_RATE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_AVERAGE_VIEW_TIME") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_COMPLETION_RATE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_TOTAL_ERROR_COUNT") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_TOTAL_ERROR_RATE") }},
+        {{ adapter.quote("VIDEO_TRUEVIEW_SKIP_RATE") }},
+        {{ adapter.quote("VIDEO_TRUEVIEW_VIEWS") }},
+        {{ adapter.quote("VIDEO_TRUEVIEW_VTR") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_VIDEO_LENGTH") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_SKIP_BUTTON_SHOWN") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_ENGAGED_VIEW") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_VIEW_THROUGH_RATE") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_AUTO_PLAYS") }},
+        {{ adapter.quote("VIDEO_VIEWERSHIP_CLICK_TO_PLAYS") }}
+
+    from source
+)
+select * from renamed

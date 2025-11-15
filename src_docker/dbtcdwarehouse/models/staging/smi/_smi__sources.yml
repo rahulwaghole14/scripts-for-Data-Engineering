@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: smi
+    database: hexa-data-report-etl-prod
+    schema: smi
+    tables:
+      - name: nz_smireporting
+        columns:
+          - name: YYYYMM
+            description: test.
+      - name: nz_hexa_mo_vs_category
+        columns:
+          - name: YYYYMM
+            description: test.
+      - name: nz_hexa_vs_totalmarket
+        columns:
+          - name: YYYYMM
+            description: test.

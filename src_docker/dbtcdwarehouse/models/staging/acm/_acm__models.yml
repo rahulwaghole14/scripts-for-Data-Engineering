@@ -1,0 +1,12 @@
+version: 2
+
+models:
+- name: stg_acm__print_data_generic
+  columns:
+    - name: email
+- name: stg_acm__print_generic_final
+  columns:
+    - name: email
+- name: stg_acm__print_subbenefit_final
+  columns:
+    - name: email

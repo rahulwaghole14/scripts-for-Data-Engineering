@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: adw
+    database: hexa-data-report-etl-prod
+    schema: adw_stage
+    tables:
+      - name: uira_targets_Brand__
+        description: "stage data from the Brand__ table in the UIRA Targets gsheet. using drop/overwrite method (airbyte)"
+      - name: uira_targets_Full
+        description: "stage data from the Full table in the UIRA Targets gsheet. using drop/overwrite method (airbyte)"
+      - name: uira_targets_Targets_Weekly
+        description: "stage data from the Targets_Weekly table in the UIRA Targets gsheet. using drop/overwrite method (airbyte)"
+      - name: uira_targets_Targets
+        description: "stage data from the Targets table in the UIRA Targets gsheet. using drop/overwrite method (airbyte)"
+      - name: uira_targets_append_Brand__
+        description: "stage data from the Brand__ table in the UIRA Targets gsheet. using append method (airbyte)"
+      - name: uira_targets_append_Full
+        description: "stage data from the Full table in the UIRA Targets gsheet. using append method (airbyte)"
+      - name: uira_targets_append_Targets_Weekly
+        description: "stage data from the Targets_Weekly table in the UIRA Targets gsheet. using append method (airbyte)"
+      - name: uira_targets_append_Targets
+        description: "stage data from the Targets table in the UIRA Targets gsheet. using append method (airbyte)"
+      - name: naviga_companies
+        description: "stage data from the Companies table in the Naviga gsheet. using one off csv upload from a gsheet"

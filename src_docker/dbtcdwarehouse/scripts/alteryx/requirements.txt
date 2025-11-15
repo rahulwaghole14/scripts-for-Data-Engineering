@@ -1,0 +1,10 @@
+dbt-core==1.7.9
+dbt-bigquery==1.7.6
+pytz==2023.3
+pyodbc==4.0.32
+pre-commit
+sqlfluff
+data-diff
+google-cloud-bigquery
+elementary-data[bigquery]
+python-dotenv

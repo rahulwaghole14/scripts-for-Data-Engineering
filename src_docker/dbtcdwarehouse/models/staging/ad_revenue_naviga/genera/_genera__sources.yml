@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: genera
+    database: hexa-data-report-etl-prod
+    schema: adw_stage
+    tables:
+      - name: genera__adrevenue
+        tests:
+          - dbt_utils.unique_combination_of_columns:
+              combination_of_columns:
+                - campaign_id
+                - line_id

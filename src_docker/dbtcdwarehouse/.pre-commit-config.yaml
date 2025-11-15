@@ -1,0 +1,50 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+      - id: check-ast
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 2.3.5
+    hooks:
+      - id: sqlfluff-lint
+        args: [--dialect, bigquery] # Specify your SQL dialect, e.g., mysql, postgresql
+        additional_dependencies: [sqlfluff-templater-dbt] # Add this line to include dbt templater
+      - id: sqlfluff-fix
+        args: [--dialect, bigquery] # Automatically fix issues where possible
+        additional_dependencies: [sqlfluff-templater-dbt] # Add this line to include dbt templater
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: pylint
+        language: python
+        types: [python]
+  - repo: https://github.com/psf/black
+    rev: 22.3.0  # Use the latest version
+    hooks:
+      - id: black
+        args: ["--line-length=79"]
+        language_version: python3.12  # Specify your Python version here
+  - repo: https://github.com/PyCQA/flake8
+    rev: '3.9.2'  # Use the latest version
+    hooks:
+      - id: flake8
+        additional_dependencies: [flake8-bugbear, flake8-comprehensions]
+  - repo: https://github.com/PyCQA/bandit
+    rev: '1.7.0'  # Use the latest version
+    hooks:
+      - id: bandit
+        args: ['-r', '.']  # Recursively analyze all Python files
